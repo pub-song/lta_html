@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <!-- mCustomScrollbar css -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">  
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.sw.css">
+  <!-- REQUIRED SCRIPTS -->
+  <script src="js/jquery-3.2.1.js"></script>
+  <!-- mCustomScrollbar JS -->
+  <script src="js/jquery.mCustomScrollbar.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- common.js -->
+  <script src="js/common.js"></script>
+  <script src="js/common_02.js"></script>
+</head>
+<body>
+<div class="wrap">
+  
+  <!-- 가이드 제목 -->
+  <div class="guide_tit mt50">레이어 팝업</div>
+  <!-- 레이어 버튼 -->
+  <button onclick="modalControl('o','#main_layer_pop');return false" class="btn_fixed_up" style="border:1px solid #222">레이어팝업 호출버튼</button>
+  <!-- 비밀번호 레이어팝업 -->
+  <section class="modal_new modal_overlay " id="main_layer_pop"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+    <div class="modal_n_wrap">
+      <div class="modal_n_body">
+        <div class="pop_cont">
+          테스트
+        </div>
+        <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 가이드 제목 -->
+  <div class="guide_tit mt50">체크박스 / 라디오버튼</div>
+  <div class="inner mt30">
+    <label class="input_type check">
+      <input type="checkbox" name="q01">
+      <span class="txt">항암제</span>
+    </label>
+
+    <label class="input_type radio">
+      <input type="radio" name="q01">
+      <span class="txt">항암제</span>
+    </label>
+  </div>
+  
+  <!-- 가이드 제목 -->
+  <div class="guide_tit mt50">기본 swiper</div>
+  <!-- 중단AD배너 -->
+  <div class="inner mt30">
+    <!-- Swiper -->
+    <div class="swiper_wrap type01">
+      <div class="swiper mySwiper ad_mid_banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="img/common/banner/img_mid_full_banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/common/banner/img_mid_full_banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/common/banner/img_mid_full_banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="img/common/banner/img_mid_full_banner.png" alt=""></a></div>
+        </div>
+        <div class="swiper-button-next"><img src="img/common/btn_right.png" alt=""></div>
+        <div class="swiper-button-prev"><img src="img/common/btn_left.png" alt=""></div>
+        <div class="swiper-pagination type01"></div>
+        <div class="swiper-autoplay-button">
+          <img src="img/common/btn_pause.png" alt="" class="pause">
+          <img src="img/common/btn_play.png" alt="" class="play">
+        </div>
+      </div>
+      <script>
+        var ad_mid_banner = new Swiper(".ad_mid_banner.swiper", {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          // spaceBetween: 4,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          // loop: true,
+          navigation: {
+            nextEl: ".ad_mid_banner .swiper-button-next",
+            prevEl: ".ad_mid_banner .swiper-button-prev",
+          },
+          autoplay: {
+            delay: 2000, // Autoplay delay in milliseconds
+            disableOnInteraction: false, // Autoplay continues after user interaction
+          },
+        });
+      
+        // Pause/Play button functionality
+        $(".ad_mid_banner .swiper-autoplay-button").click(function(){
+          $(this).toggleClass("paused");
+          if( $(this).is(".paused") ){
+            ad_mid_banner.autoplay.stop();
+          }
+          else{
+            ad_mid_banner.autoplay.start();
+          };
+        });
+      </script>
+    </div>
+  </div>
+
+  <!-- 가이드 제목 -->
+  <div class="guide_tit mt50">커스텀 스크롤바</div>
+  <div class="inner mt30">
+    <div class="left_cont mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+      <ul>
+        <li>리스트 01</li>
+        <li>리스트 02</li>
+        <li>리스트 03</li>
+        <li>리스트 04</li>
+        <li>리스트 05</li>
+        <li>리스트 06</li>
+        <li>리스트 07</li>
+        <li>리스트 08</li>
+        <li>리스트 09</li>
+        <li>리스트 10</li>
+      </ul>
+    </div>
+  </div>
+  <!--  -->
+  
+
+</div>
+  
+</body>
+</html>

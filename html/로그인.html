@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>JWP Mall</title>
+  <!-- 기존 common css -->
+  <link rel="stylesheet" href="css/common.css">
+
+
+  <!-- 신규 common_new css -->
+  <link rel="stylesheet" href="css/common_new.css">
+  <!-- mCustomScrollbar css -->
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+  <!-- REQUIRED SCRIPTS -->
+  <script src="js/jquery-3.2.1.js"></script>
+  <!-- mCustomScrollbar JS -->
+  <script src="js/jquery.mCustomScrollbar.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- common.js -->
+  <script src="js/common_new.js"></script>
+</head>
+<body>
+<div class="login_wrap" id="login_new">
+  <div class="inner">
+    <div class="content_area">
+      <!-- tit_area -->
+      <div class="tit_area">
+        <p class="s_tit">병의원에 필요한 제품을 판매하는</p>
+        <p class="b_tit">중외제약 온라인 쇼핑몰</p>
+        <p class="noti_txt">JWPMALL은 병의원에 필요한 제품을 판매하는<br>병의원 전용 쇼핑몰입니다.</p>
+      </div>
+      <div class="img_area">
+        <img src="img/login/img_content.png" alt="">
+      </div>
+      <div class="list">
+        <img src="img/login/img_list.png" alt="">
+        <a href="#none">
+          <img src="img/login/img_list_02.png" alt="">
+        </a>
+
+        <ol class="hidden">
+          <li>
+            <span class="num">01</span>
+            <p class="txt">
+              회원가입 시<br>
+              즉시 사용 가능한 포인트 지급<br>
+              <span class="colorG">(최대 5만원)</span>
+            </p>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <p class="txt">
+              JW중외제약의<br>
+              모든 제품과 의료소모품<br>
+              <span class="colorG">최저가로 구매</span> 가능
+            </p>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <p class="txt">
+              신한, 현대, BC 등<br>
+              주요 카드사<br>
+              무이자 할부 가능 <span class="colorG">(최대 3개월)</span>
+            </p>
+            <p class="s_txt">카드사별 무이자는 매월 변경됩니다.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="login_area">
+      <form name="Frm" method="post" onsubmit="return loginSubmit(this)" autocomplete="off">
+        <div class="login_member">
+          <div class="img_box">
+            <img src="img/login/logo_jwpmall.png" alt="">
+          </div>
+          <h2>로그인</h2>
+          <fieldset>
+            <legend>회원 로그인</legend>
+            <div class="input_txt">
+              <label for="member_id" class="hidden">아이디</label>
+              <input type="text" id="member_id" name="id" placeholder="아이디">										
+            </div>
+            <div class="input_txt">
+              <label for="member_pw" class="hidden">비밀번호</label>										
+              <input type="password" id="member_pw" name="pw" placeholder="비밀번호">
+            </div>
+            <div class="checkbox only">
+              <label><input type="checkbox" class="type02">아이디 저장</label>
+            </div>
+            <div class="btn_area mt20">
+              <button class="btn w100">로그인</button>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+      <ul class="btn_list">
+        <li class="bar"><a href="https://www.jwpmall.co.kr/member/join_reference.do">회원가입</a></li>
+        <li class="bar"><a href="https://www.jwpmall.co.kr/member/find_id.do">아이디찾기</a></li>
+        <li><a href="https://www.jwpmall.co.kr/member/find_pw.do">비밀번호찾기</a></li>
+      </ul>
+      <div class="etc">
+        <ul class="txt_area mt40">
+          <li>
+            <p class="txt">회원가입 문의 안내</p>
+            <p class="num">02.840.6907</p>
+          </li>
+          <li>
+            <p class="time">
+              평일 9:00 ~ 18:00  토 / 일 / 공휴일 휴무<br>
+              점심시간 PM 12:00 ~ 13:00<br>
+              토 / 일 / 공휴일 휴무
+            </p>
+          </li>
+        </ul>
+        <div class="btn_area mt30">
+          <button class="btn type02 w100" onclick="modalControl('o','#noti_pop');return false">입점업체 제휴안내</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 입점업체 제휴안내 레이어팝업 -->
+  <section class="modal_new modal_overlay" id="noti_pop"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+    <div class="modal_n_wrap">
+        <div class="modal_n_body" style="width:536px">
+            <div class="pop_cont">
+                <!--  -->
+                <!-- popContent -->
+                <div class="popContent noti_pop_cont">
+                  <!-- pop-cont -->
+                  <div class="pop-cont">
+                    <div class="title_cont">
+                      <p>
+                        <strong>JWP</strong>MALL과 함께 할<br>
+                        <span><strong> 파트너</strong>를 모십니다.</span>
+                      </p>
+                    </div>
+                    <div class="info_cont">
+                      <div class="txt_cont">
+                        <p class="tit">문의안내</p>
+                        <p class="num">
+                          <span>080.802.7777</span>(무료), <span>1588.9708</span>(유료)
+                        </p>
+                        <p class="sub_txt">평일 오전 9시 ~ 18시 문의 바랍니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //pop-cont -->
+                </div>
+                <!-- //popContent -->
+                <!--  -->
+                <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--  -->
+    
+
+  <!-- footer 추가된 부분  -->
+  <!-- <div class="inner mt100">
+    <div class="noti_wrap">
+      <ul class="noti_cont">
+        <li>
+          <div class="tab_list">
+            <div class="tab-group">
+              <ul class="tab-menu">
+                <li class="tab-item active bar">JW중외제약</li>
+                <li class="tab-item">입점사 공지</li>
+              </ul>
+              <a href="#" class="btn_more">더보기</a>
+              <div class="tab-content">
+                <div class="tab-pane active">
+                  <table class="noti_table">
+                    <colgroup>
+                      <col style="width:85%">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><a href="#">[공지] ※비급여 영양수액 판매처 변경 안내※</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 엔커버 약가인하 공지</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 체스트메이트 기기등록 방법</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] [공지] 배송 조회 서비스 오픈</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 체스트메이트 기기등록 방법</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane">
+                  <table class="noti_table">
+                    <colgroup>
+                      <col style="width:85%">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td><a href="#">[공지] ※입점사 공지※</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 엔커버 약가인하 공지</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 체스트메이트 기기등록 방법</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] [공지] 배송 조회 서비스 오픈</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">[공지] 체스트메이트 기기등록 방법</a></td>
+                        <td class="txt_right">02.23</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="link_list">
+          <a href="#" class="ico_01">문의하기</a>
+          <a href="#" class="ico_02">고객센터</a>
+          <a href="#" class="ico_03">배송안내</a>
+        </li>
+        <li class="text_cont">
+          <p class="txt">고객센터</p>
+          <span class="num">02.840.6907</span>
+          <div class="txt_time">
+            <p><span>운영시간</span><span>평일 9:00 ~ 18:00  토 / 일 / 공휴일 휴무</span></p>
+            <p><span>점심시간</span><span>12:00 ~ 13:00</span></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <!-- //footer 추가된 부분  -->
+
+</div>
+<!-- footer -->
+<div id="footer" class="mt100">
+  <div class="menubox">
+    <div class="inner">
+      <ul class="link">
+          <li class="">
+            <a href="http://www.jw-pharma.co.kr/pharma/ko/intro/pharma.jsp"  target="_blank">
+              회사소개
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/etc/guide.do"  target="_self">
+              이용안내
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/etc/delivery.do"  target="_self">
+              배송/결제안내
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/cscenter/inquiry.do"  target="_self">
+              1:1문의
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/etc/licensing.do"  target="_self">
+              이용약관
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/etc/privacy.do" style="font-weight: 500;font-style: italic;" target="_self">
+              개인정보처리방침
+            </a>
+          </li>
+          <li class="">
+            <a href="https://www.jwpmall.co.kr/cscenter/faq.do"  target="_self">
+              FAQ
+            </a>
+          </li>
+          <li class="mar_none pad_none bg_none">
+            <a href="https://www.jwpmall.co.kr/board/list.do?board=notice"  target="_self">
+              공지사항
+            </a>
+          </li>
+      </ul>
+      <div class="familsite" >
+        <a href="javascript:;" onclick="familyopen()"><span>FAMILY SITE</span></a>
+        <div>
+          <ul class="list on">
+            <li><a href="https://www.jw-pharma.co.kr" target="_blank" title="새창열림">JW중외제약</a></li>
+            <li><a href="http://www.jw-holdings.co.kr" target="_blank" title="새창열림">JW홀딩스</a></li>
+            <li><a href="http://www.jw-shinyak.co.kr" target="_blank" title="새창열림">JW신약</a></li>
+            <li><a href="http://www.jw-lifescience.co.kr" target="_blank" title="새창열림">JW생명과학</a></li>
+            <li><a href="http://www.jw-medical.co.kr" target="_blank" title="새창열림">JW메디칼</a></li>
+            <li><a href="http://www.jw-bioscience.co.kr" target="_blank" title="새창열림">JW바이오사이언스</a></li>
+            <li><a href="http://jw-industrial.co.kr/" target="_blank" title="새창열림">JW산업</a></li>
+            <li><a href="http://www.creagene.com" target="_blank" title="새창열림">JW크레아젠</a></li>
+            <li><a href="http://www.chemitown.co.kr" target="_blank" title="새창열림">JW케미타운</a></li>
+            <li><a href="http://www.cnclab.co.kr" target="_blank" title="새창열림">C&amp;C신약연구소</a></li>
+            <li><a href="http://www.theriacpharm.com" target="_blank" title="새창열림">JW Theriac 연구소</a></li>
+            <li><a href="http://jwfoundation.or.kr/" target="_blank" title="새창열림">중외학술복지재단</a></li>
+            <li><a href="http://www.jwellday.com" target="_blank" title="새창열림">J웰데이</a></li>
+          </ul>
+          <a href="javascript:;" onClick="familyclose()"><span>FAMILY SITE</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner infobox">
+    <h6>
+      <img src="https://www.jwpmall.co.kr/data/base/imgs/global/footer_logo.png" alt="" />
+    </h6>
+    <div class="info">
+      <address>
+        JW중외제약㈜  <span>|</span>  주소 : (13840)&nbsp;경기도 과천시 과천대로7길 38 (갈현동)&nbsp;JW과천사옥  <span>|</span>  대표자 : 신영섭  <span>|</span>  대표번호 : 02-840-6907<br />
+        사업자등록번호 118-81-02477  <span>|</span>  통신판매업신고 제2012-서울서초-1380호  <span>|</span>  건강식품판매신고 동작 제00008호  <span>|</span>  의료기기판매업신고 동작 제 166호
+      </address>
+      <p>&copy 2020 JW중외제약 All rights reserved.</p>
+    </div>
+    <div class="qrcode">
+      <img src="https://www.jwpmall.co.kr/data/base/imgs/global/qrcode.png" width="76px" height="76px" alt="" />
+      <span>JWP MALL 모바일</span>
+    </div>
+  </div>
+</div>
+<!-- //footer -->
+</body>
+</html>
