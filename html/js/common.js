@@ -17,6 +17,57 @@ function modalControl(type,id,size){ //type:열기(o),닫기(c) / id: 열 모달
 	}
 }
 
+// 상세검색 열기
+$(document).ready(function(){
+  // search_cont_detail 안의 btn_search 버튼 클릭 시 on 클래스 추가
+  $('.btn_search').on('click', function() {
+    $('.search_cont_detail').addClass('on');
+  });
+
+  // search_cont_detail 안의 btn_close 버튼 클릭 시 on 클래스 제거
+  $('.search_cont_detail .btn_close').on('click', function() {
+    $(this).closest('.search_cont_detail').removeClass('on');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // //javascript
 // function openWindowPop(url, name){
 //     var options = 'top=10, left=10, width=500, height=555, status=no, menubar=no, toolbar=no, resizable=no';

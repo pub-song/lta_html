@@ -73,7 +73,7 @@ a, button{cursor:pointer}
 html.hasModal{overflow:hidden;position:fixed;top:0;left:0;right:0;bottom:0}
 
 .topBtn{position:fixed;bottom:30px;left:50%;margin-left:640px;z-index:101;}
-.topBtn button{background:url(../images/common/btn_top.png) no-repeat 50%;width:50px;height:50px;color:transparent;font-size:0;text-indent:-9999px;}
+.topBtn button{background:url(../img/pc/btn_top.png) no-repeat 50%;width:50px;height:50px;color:transparent;font-size:0;text-indent:-9999px;}
 
 /* Layout */
 html, body{height:100%}
@@ -101,7 +101,7 @@ body{min-height:100%}
 .location ul{position:absolute;top:30px;right:0;}
 .location ul:after{content:'';display:block;clear:both;}
 .location ul li.home{color:#888;padding-left:0;background:none;}
-.location ul li{float:left;font-family:'NotoSansL';font-size:14px;color:#888;padding-left:16px;margin-right:10px;background:url(../images/common/blt_arrow.png) no-repeat 0 50%;}
+.location ul li{float:left;font-family:'NotoSansL';font-size:14px;color:#888;padding-left:16px;margin-right:10px;background:url(../img/pc/blt_arrow.png) no-repeat 0 50%;}
 .location ul li:last-child{margin-right:0;font-family:'NotoSansB';color:#444;}
 
 /* Form */

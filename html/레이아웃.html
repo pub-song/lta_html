@@ -51,200 +51,103 @@
   <!-- container -->
   <div class="container">
     <!-- 검색영역 -->
-    <div class="sc bg_gray">
+    <div class="sc bg_top">
       <div class="inner">
         <div class="location">
           <a href="#none">홈</a>
           <a href="#none">조사</a>
         </div>
+        <h2 class="title">조사</h2>
         <div class="search_cont">
-          <span class="search">
-            <select name="" id="">
+          <span class="search_box">
+            <!-- <select name="" id="">
               <option value="전체">전체</option>
               <option value="옵션1">옵션1</option>
               <option value="옵션2">옵션2</option>
-            </select>
+            </select> -->
             <span class="input_cont">
-              <input type="text" placeholder="검색어를 입력해 주세요.">
+              <input type="text" class="ico_search" placeholder="검색어를 입력해 주세요.">
             </span>
+            <button class="btn btn_size_s btn_search"><span>상세검색</span></button>
           </span>
-          <button class="btn_search">고급검색</button>
         </div>
-      </div>
-    </div>
-    
-    <!-- 슬라이드 배너 -->
-    <div class="sc">
-      <div class="inner">
-        <!-- Swiper -->
-        <div class="swiper_wrap type01">
-          <div class="swiper mySwiper ad_mid_banner">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><a href="#"><img src="img/common/pc/banner_01.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="#"><img src="img/common/pc/banner_01.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="#"><img src="img/common/pc/banner_01.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="#"><img src="img/common/pc/banner_01.png" alt=""></a></div>
-            </div>
-            <div class="swiper-button-next"><img src="img/common/btn_right.png" alt=""></div>
-            <div class="swiper-button-prev"><img src="img/common/btn_left.png" alt=""></div>
-            <div class="swiper-pagination type01"></div>
-            <div class="swiper-autoplay-button">
-              <img src="img/common/btn_pause.png" alt="" class="pause">
-              <img src="img/common/btn_play.png" alt="" class="play">
-            </div>
+        <!-- 상세검색 화면 -->
+        <div class="search_cont_detail on">
+          <div class="cont">
+            <select name="" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <select name="" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <select name="" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
           </div>
-          <script>
-            var ad_mid_banner = new Swiper(".ad_mid_banner.swiper", {
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-              // spaceBetween: 4,
-              pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-              },
-              // loop: true,
-              navigation: {
-                nextEl: ".ad_mid_banner .swiper-button-next",
-                prevEl: ".ad_mid_banner .swiper-button-prev",
-              },
-              autoplay: {
-                delay: 2000, // Autoplay delay in milliseconds
-                disableOnInteraction: false, // Autoplay continues after user interaction
-              },
-            });
-          
-            // Pause/Play button functionality
-            $(".ad_mid_banner .swiper-autoplay-button").click(function(){
-              $(this).toggleClass("paused");
-              if( $(this).is(".paused") ){
-                ad_mid_banner.autoplay.stop();
-              }
-              else{
-                ad_mid_banner.autoplay.start();
-              };
-            });
-          </script>
+          <button class="btn_close"></button>
         </div>
       </div>
     </div>
 
-    <!-- 공지사항, 자료실 -->
-    <div class="sc">
+    <div class="content_wrap">
       <div class="inner">
-        <div class="noti_board_wrap">
-          <!-- 공지사항 -->
+        <div class="top_info_box">
           <div class="left_cont">
-            <div class="tit_cont">
-              <strong class="tit">공지사항</strong>
-              <span class="more">더보기</span>
-            </div>
-            <ul class="list">
-              <li>
-                <span class="tit"><a href="#none">이양건의 관련 공지사항 확인</a></span>
-                <span class="date">2024.07.17</span>
-              </li>
-              <li>
-                <span class="tit">이양건의 관련 공지사항 확인</span>
-                <span class="date">2024.07.17</span>
-              </li>
-            </ul>
+            <span class="total">총 <strong>11,994</strong>건</span>
+            <a href="#none" class="btn ico_check_01"><span>변경된 사무 확인</span></a>
+            <a href="#none" class="btn ico_check_02"><span>사무로 재요청</span></a>
+            <a href="#none" class="btn ico_check_03"><span>비사무로 재요청</span></a>
+            <a href="#none" class="btn ico_check_04"><span>일괄 승인</span></a>
+
           </div>
-          <!-- 자료실 -->
           <div class="right_cont">
-            <div class="tit_cont">
-              <strong class="tit">자료실</strong>
-              <span class="more">더보기</span>
-            </div>
-            <ul class="list">
-              <li>
-                <span class="tit">이양사무 관련 자료1</span>
-              </li>
-            </ul>
+            <a href="#none" class="btn ico_upload"><span>엑셀 업로드</span></a>
+            <a href="#none" class="btn ico_download"><span>엑셀 다운로드</span></a>
           </div>
         </div>
-      </div>
-    </div>
+        <!-- table -->
+        <table>
+          <colgroup>
+            <col style="width:10%;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>sdf</th>
+              <th>sdf</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sdf</td>
+              <td>sdf</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <!-- 과제이력관리 현황 -->
-    <div class="sc">
-      <div class="inner">
-        <div class="info_board">
-          <strong class="tit">과제이력관리 현황</strong>
-          <ul>
-            <li>
-              <div class="tit_cont">
-                <span>농림축산식품부</span>
-                <span class="ico_round color_orange">의견수렴완료 / 심의요청 전</span>
-              </div>
-              <div class="info_cont">
-                <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
-                <span>국가 → 시도</span>
-                <p class="txt">농지법에 따른 각 진흥 지역은 현재 중앙정부에서 관리가 어려워 각 지방으로 이양이 필...</p>
-              </div>
-            </li>
-            <li>
-              <div class="tit_cont">
-                <span>농림축산식품부</span>
-                <span class="ico_round color_green">심의요청완료 / 전문위 심의중</span>
-              </div>
-              <div class="info_cont">
-                <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
-                <span>국가 → 시도</span>
-                <p class="txt">농지법에 따른 각 진흥 지역은 현재 중앙정부에서 관리가 어려워 각 지방으로 이양이 필...</p>
-              </div>
-            </li>
-            <li>
-              <div class="tit_cont">
-                <span>농림축산식품부</span>
-                <span class="ico_round color_purple">전문위 심의완료 / 분과위 심의중</span>
-              </div>
-              <div class="info_cont">
-                <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
-                <span>국가 → 시도</span>
-                <p class="txt">농지법에 따른 각 진흥 지역은 현재 중앙정부에서 관리가 어려워 각 지방으로 이양이 필...</p>
-              </div>
-            </li>
-          </ul>
+        <!-- paging -->
+        <div class="paging">
+          <a href="#none" class="prev"></a>
+          <ol>
+            <li><a href="#none" class="on">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><a href="#none">3</a></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+            <li><a href="#none">6</a></li>
+            <li><a href="#none">7</a></li>
+            <li><a href="#none">8</a></li>
+            <li><a href="#none">9</a></li>
+            <li><a href="#none">10</a></li>
+          </ol>
+          <a href="#none" class="next"></a>
         </div>
-      </div>
-    </div>
-
-    <!-- 사무 배분 현황 -->
-    <div class="sc">
-      <div class="inner">
-        <div class="graph_cont right_cont">
-          <div class="tit_cont">
-            <strong class="tit">사무 배분 현황</strong>
-            <span class="total">총 <span>60,000</span>건</span>
-          </div>
-          <ul>
-            <li>
-              <span class="tit">국가사무</span>
-              <span class="bar_cont"><span class="bar" style="width:35%">35%</span></span>
-              <span class="num"><strong>31,000</strong>건</span>
-            </li>
-            <li>
-              <span class="tit">공동사무</span>
-              <span class="bar_cont"><span class="bar" style="width:30%">30%</span></span>
-              <span class="num"><strong>18,000</strong>건</span>
-            </li>
-            <li>
-              <span class="tit">자차사무</span>
-              <span class="bar_cont"><span class="bar" style="width:35%">35%</span></span>
-              <span class="num"><strong>31,000</strong>건</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="sc">
-      <div class="inner">
-        <ul class="bottom_link_cont">
-          <li><a href="#none">이양사무 이용안내</a></li>
-          <li><a href="#none">문의하기</a></li>
-          <li><a href="#none">건의하기</a></li>
-        </ul>
       </div>
     </div>
   </div>
