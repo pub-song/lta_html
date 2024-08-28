@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지방이양자동화 시스템 구축 프로젝트</title>
+  <link rel="stylesheet" href="css/common.css">
+  <!-- mCustomScrollbar css -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">  
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.sw.css">
+  <!-- REQUIRED SCRIPTS -->
+  <script src="js/jquery-3.2.1.js"></script>
+  <!-- mCustomScrollbar JS -->
+  <script src="js/jquery.mCustomScrollbar.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- common.js -->
+  <script src="js/common.js"></script>
+  <script src="js/common_02.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <!-- header -->
+  <div class="header">
+    <div class="inner">
+      <div class="header_cont">
+        <h1 class="logo"><a href="#none">지방이양사무관리시스템</a></h1>
+        <ul class="menu">
+          <li><a href="#none" class="on">법령</a></li>
+          <li><a href="#none">조사</a></li>
+          <li><a href="#none">사무</a></li>
+          <li><a href="#none">이양사무</a></li>
+          <li><a href="#none">통계</a></li>
+          <li><a href="#none">대국민 포털관리</a></li>
+          <li><a href="#none">시스템 관리</a></li>
+        </ul>
+        <!-- 로그인/회원가입 버튼 -->
+        <div class="info_cont" style="display: none;">
+          <span class="bar"><a href="#none" class="ico_login"><span>로그인</span></a></span>
+          <span><a href="#none" class="ico_join"><span>회원가입</span></a></span>
+        </div>
+
+        <!-- 마이페이지/사용자/로그아웃 -->
+        <div class="info_cont">
+          <ul class="info_menu">
+            <li class="bar"><a href="#none">마이페이지</a></li>
+          </ul>
+          <span class="user"><strong>홍길동</strong>님 <span class="rank"><strong>7</strong>등급</span></span>
+          <button class="btn_log">
+            <span class="txt">로그아웃</span>
+            <span class="time">09:55</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <!-- container -->
+  <div class="container">
+    <!-- 검색영역 -->
+    <div class="sc bg_top ">
+      <div class="inner">
+        <div class="location">
+          <a href="#none">홈</a>
+          <a href="#none">자동생성 사무정보</a>
+        </div>
+        <a href="#none" class="btn ico_print"><span>프린트</span></a>
+        <h2 class="title">자동생성 사무정보</h2>
+      </div>
+    </div>
+
+    <div class="content_wrap">
+      <div class="inner">
+        <div class="top_info_box pc">
+          <div class="left_cont">
+            <h3 class="document-title">사무정보</h3>
+          </div>
+          <div class="right_cont">            
+            <a href="#none" class="btn ico_pencil"><span>이력확인</span></a>            
+          </div>
+        </div>
+
+        <div class="table_cont">
+            <table class="table-body-only">
+                <colgroup>
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />
+                    <col width="" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">사무 ID</th>
+                        <td>
+                            <div class="form-element__wrap">                                
+                                <span class="form-element__inner input-type">
+                                    <input type="text" value="" class="input-type1-font14" placeholder="사무 ID" id="aa" title="사무 ID">
+                                </span>
+                            </div>                            
+                        </td>
+                        <th scope="row">사무 검토 상태</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">사무구분</th>
+                        <td></td>
+                        <th scope="row">사무주체</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">사무명</th>
+                        <td colspan="3"></td>                 
+                    </tr>
+                    <tr>
+                        <th scope="row">사무유형</th>
+                        <td></td>
+                        <th scope="row">세부사무유형</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">위임사무 여부</th>
+                        <td>
+                            <div class="radio-box">
+                                <label id="r01">
+                                    <input type="radio" name="type1" value="type010" id="r01">
+                                    <span>O</span>
+                                </label>
+                                <label id="r02">
+                                    <input type="radio" name="type1" value="type011" id="r02" checked="">
+                                    <span>x</span>
+                                </label>
+                            </div>                            
+                        </td>
+                        <th scope="row">위임 근거규정</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">재위임사무 여부</th>
+                        <td>
+                            <div class="radio-box">
+                                <label id="r03">
+                                    <input type="radio" name="type2" value="type020" id="r03">
+                                    <span>O</span>
+                                </label>
+                                <label id="r04">
+                                    <input type="radio" name="type2" value="type021" id="r04">
+                                    <span>x</span>
+                                </label>
+                            </div>                               
+                        </td>
+                        <th scope="row">재위임 근거규정</th>
+                        <td>
+                            <div class="radio-box">
+                                <label id="r05">
+                                    <input type="radio" name="type3" value="type030" id="r05">
+                                    <span>O</span>
+                                </label>
+                                <label id="r06">
+                                    <input type="radio" name="type3" value="type031" id="r06">
+                                    <span>x</span>
+                                </label>
+                            </div>                                
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">위탁사무 여부</th>
+                        <td></td>
+                        <th scope="row">위탁 근거규정</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">수행기관</th>
+                        <td></td>
+                        <th scope="row">특행기관</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">재수임기관</th>
+                        <td></td>
+                        <th scope="row">수탁기관</th>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">비고</th>
+                        <td colspan="3"></td>               
+                    </tr>                                                                                                                                                               
+                </tbody>
+            </table>
+        </div>
+        <div class="table_cont">
+            <table>
+                <colgroup>
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />
+                    <col width="" />                    
+                    <col width="" />
+                </colgroup>
+                <tbody>             
+                    <tr>
+                        <th>승인요청자</th>
+                        <th>소속</th>
+                        <td></td>
+                        <th>이름</th>
+                        <td></td>
+                        <th>요청날짜</th>
+                        <td></td>                                                
+                    </tr>      
+                    <tr>
+                        <th>승인자</th>
+                        <th>소속</th>
+                        <td></td>
+                        <th>이름</th>
+                        <td></td>
+                        <th>승인날짜</th>
+                        <td></td>                                                
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="inner">
+      <div class="top_info float_box">
+        <div class="left_cont">
+          <a href="#none" class="bar">이용약관</a>
+          <a href="#none" class="point">개인정보처리방침</a>
+        </div>
+        <div class="right_cont">
+          <!-- select_box -->
+          <div class="select_box type02" style="min-width:240px;">
+            <span class="select">소속기관 누리집 바로가기</span>
+            <div class="option">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <ul>
+                  <li>선택함1</li>
+                  <li>선택함2</li>
+                  <li>선택함3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- select_box -->
+          <div class="select_box type02" style="min-width:240px;">
+            <span class="select">신하기관 누리집 바로가기</span>
+            <div class="option">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <ul>
+                  <li>선택함1</li>
+                  <li>선택함2</li>
+                  <li>선택함3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_box">
+        <address>
+          <span class="bar">본관 : (30112) 세종특별자치시 도움6로 42(어진동)</span>
+          <span>별관 : (30116) 세존특별자치시 가름로 143(어진동)</span>
+        </address>
+        <div class="info_num_box pc">
+          <p>
+            <span class="tit bar">정부민원안내콜센터</span>
+            <strong class="txt">국번없이 110</strong>
+            <span class="s_txt">(무료)</span>
+          </p>
+          <p>
+            <span class="tit bar">행정안전부 콜센터</span>
+            <strong class="txt">02-2100-3399</strong>
+            <span class="s_txt bar">(월~금 9:00~18:00, 공휴일 제외, 유료)</span>
+            <span class="tit">팩스</span>
+            <strong class="txt">044-204-8911</strong>
+          </p>
+          <p>
+          </p>
+          <p>
+            <span class="s_txt">(근무시간 외) 당직실 : 044-205-1600</span>
+          </p>
+        </div>
+        <div class="info_num_box mo">
+          <p>
+            <span class="tit bar">정부민원안내콜센터</span>
+            <strong class="txt">국번없이 110</strong>
+            <span class="s_txt">(무료)</span>
+          </p>
+          <p>
+            <span class="tit bar">행정안전부 콜센터</span>
+            <strong class="txt">02-2100-3399</strong>
+          </p>
+          <p style="margin-top:8px;">
+            <span class="s_txt">(월~금 9:00~18:00, 공휴일 제외, 유료)</span>
+          </p>
+          <p>
+            <span class="tit">팩스</span>
+            <strong class="txt">044-204-8911</strong>
+          </p>
+          <p>
+            <span class="s_txt">(근무시간 외) 당직실 : 044-205-1600</span>
+          </p>
+        </div>
+        <p class="copy">ⓒ Ministry of the Interior and Safety. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
