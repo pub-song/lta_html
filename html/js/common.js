@@ -32,8 +32,57 @@ $(document).ready(function(){
 
 
 
+// 커스텀 스크롤 속도
+$(document).ready(function(){
+  $(".mCustomScrollbar").mCustomScrollbar({
+      theme: "dark",
+      scrollInertia: 100, // Adjust the scroll speed (lower values mean faster scroll)
+      mouseWheel: {
+          scrollAmount: 80 // Adjust this value to control scroll speed (higher values for faster scroll)
+      }
+  });
+});
 
+// 셀렉트 박스
+$(document).ready(function() {
+  $('.select_box .select').on('click', function() {
+    var $currentSelectBox = $(this).closest('.select_box');
+    var $currentOption = $currentSelectBox.find('.option');
 
+    // 모든 select_box의 옵션 목록을 숨기고, on 클래스를 제거
+    $('.select_box').not($currentSelectBox).each(function() {
+      var $otherOption = $(this).find('.option');
+      $otherOption.hide();
+      $(this).removeClass('on');
+    });
+
+    // 현재 클릭된 select_box의 옵션 목록을 토글
+    if ($currentOption.is(':visible')) {
+      $currentOption.hide();
+      $currentSelectBox.removeClass('on');
+    } else {
+      $currentOption.show();
+      $currentSelectBox.addClass('on');
+    }
+  });
+
+  $('.select_box .option ul li').on('click', function() {
+    var $selectBox = $(this).closest('.select_box');
+    var selectedText = $(this).text();
+    
+    // 선택된 항목 텍스트 업데이트
+    $selectBox.find('.select').text(selectedText);
+    $selectBox.find('.option').hide();
+    $selectBox.removeClass('on');
+  });
+
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.select_box').length) {
+      $('.select_box .option').hide();
+      $('.select_box').removeClass('on');
+    }
+  });
+});
 
 
 
