@@ -59,6 +59,9 @@
     gap: 10px;
     width: 100%;
 }
+.form-element__wrap.multiline {
+    flex-direction: row;
+}
 .form-element__wrap.txtarea_wrap {
     gap: 0;
 }
@@ -82,11 +85,9 @@
 .form-element__wrap .form-element__inner input::placeholder {
     color: #717B8A;
 }
-.form-element__wrap .form-element__inner.input-disabled input:disabled {
+.form-element__wrap .form-element__inner input:disabled {
     color: #757575;
-}
-.form-element__wrap .form-element__inner.input-disabled {
-    background: #efefef;
+    opacity: 0.5;
 }
 
 
@@ -105,3 +106,228 @@
     background: url(../img/pc/ico/ico_pencil.png) no-repeat 0 center;
     background-size: contain;
 }
+.button__wrap {
+    display: flex;
+    align-items: center;
+}
+.button__wrap.flex-end {
+    justify-content: flex-end;
+}
+.button__wrap.justify-between {
+    justify-content: space-between;
+}
+.btn-gra-sm {
+    color: #222222;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    background: #D8DDE9;
+    border-radius: 8px;
+    border: 0;
+    height: 32px;    
+    padding: 0px 8px;
+}
+.btn-gray-default {
+    width: 160px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #AEB7C6;
+    background: #F9F9FB;
+    border-radius: 12px;
+    color:#494E56;
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+.btn-gray-default i {
+    width:24px;
+    height: 24px;
+    display: inline-flex;
+}
+.btn-gray-default i::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/ico_cancel_book.png') no-repeat;
+    background-size: contain;
+}
+.btn-primary-default {
+    width: 160px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #706DF0;
+    background-color: #706DF0;
+    border-radius: 12px;
+    color:#fff;
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+.btn-primary-default i {
+    width: 15px;
+    height: 11px;
+    display: inline-flex;
+}
+.btn-primary-default i::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/ico_check_wt.png') no-repeat;
+    background-size: contain;
+}
+/* //테이블 */
+.table_cont .table-body-only {
+    border-top: 1px solid #222;
+}
+.table_cont .table-body-only tbody th {
+    background: #F9F9FB;
+    height: 72px;
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    vertical-align: middle;
+    text-align: left;
+    color:#222222;
+    padding-left: 12px;
+    border-bottom: 1px solid #D8DDE9;
+}
+.table_cont .table-body-only tbody td {
+    padding: 0 16px;
+    height: 72px;
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    vertical-align: middle;
+    text-align: left;
+    color:#222222;
+    padding-left: 12px;
+    cursor: default;
+}
+.table_cont .table-body-only tbody td input {
+    padding-left: 0;
+}
+.table-body-only.confirm-table tbody th.title-cell {
+    color:#222;
+    font-size: 18px;
+}
+
+.inner-table-cont {
+    border: 1px solid #D8DDE9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.table_cont .table-body-only tbody td.inner-table {
+    padding: 25px 0;
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table thead tr th {
+    height: 39px;
+    vertical-align: middle;
+    border-top: 0 !important;
+    border-bottom: 1px solid #D8DDE9;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    background-color: #fff;
+    text-align: center;    
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table tbody tr td {
+    height: 39px;
+    vertical-align: middle;        
+    border-right: 1px solid #D8DDE9;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    background-color: #fff;
+    text-align: center;    
+    color: #717B8A;
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table tbody tr td.tit {
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #222;
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table tbody tr td.text-l {
+    text-align: left;
+    padding: 16px;
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table tbody tr td.no-line {
+    border: 0 !important;
+}
+.table_cont .table-body-only tbody td.inner-table  .inner-table-cont table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+
+/* 모달 */
+.modal_new.roll-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_n_wrap.roll-modal {
+    width: 960px;
+    position: relative;
+}
+.modal_n_wrap.roll-modal .modal-header {
+    background: #706DF0;
+    height: 64px;
+    color:#fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.modal_n_wrap.roll-modal .modal-header .tit {
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+.modal_n_wrap.roll-modal .modal_n_body {
+    width: 100%;
+}
+.modal_n_wrap.roll-modal .btn_close {
+    width: 19px;
+    height: 19px;
+    background: url(../img/pc/ico/ico_close_x.png) no-repeat;
+    background-size: contain;
+    border: 0;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    z-index: 10;
+}
+.mt-16 {margin-top: 16px;}
+.mt-64 {margin-top: 64px;}
+
