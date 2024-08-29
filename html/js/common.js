@@ -30,8 +30,6 @@ $(document).ready(function(){
   });
 });
 
-
-
 // 커스텀 스크롤 속도
 $(document).ready(function(){
   $(".mCustomScrollbar").mCustomScrollbar({
@@ -83,6 +81,112 @@ $(document).ready(function() {
     }
   });
 });
+
+// 셀렉트 박스 select_box option 에 마우스가 올라가면 페이지 scroll 생기지 않게 막기
+$(document).ready(function() {
+  var scrollTop = 0; // 현재 스크롤 위치를 저장할 변수
+
+  $('.select_box .option').hover(
+    function() {
+      // 마우스가 .select_box 위에 있을 때
+      scrollTop = $(window).scrollTop(); // 현재 스크롤 위치 저장
+      $('html').css({
+        'overflow-y': 'scroll',
+        'position': 'fixed',
+        'top': -scrollTop + 'px', // 현재 스크롤 위치 유지
+        'left': '0px',
+        'width': '100%'
+      });
+    },
+    function() {
+      // 마우스가 .select_box 밖으로 나갔을 때
+      $('html').css({
+        'overflow-y': '',
+        'position': '',
+        'top': '',
+        'left': '',
+        'width': ''
+      });
+      $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
+    }
+  );
+});
+
+// 모바일에서 select_box 눌렀을때
+// $(document).ready(function() {
+//   var scrollTop = 0; // 현재 스크롤 위치를 저장할 변수
+
+//   // .select_box에 on 클래스가 추가될 때 처리
+//   $('.select_box').on('classChange', function() {
+//     if ($('body').hasClass('mo_mode') && $(this).hasClass('on')) {
+//       // 현재 스크롤 위치 저장
+//       scrollTop = $(window).scrollTop();
+//       // 스크롤 및 위치 고정
+//       $('html').css({
+//         'overflow-y': 'scroll',
+//         'position': 'fixed',
+//         'top': -scrollTop + 'px', // 현재 스크롤 위치 유지
+//         'left': '0px',
+//         'width': '100%'
+//       });
+//     } else {
+//       // .select_box에서 on 클래스가 제거될 때 스크롤 및 위치 초기화
+//       $('html').css({
+//         'overflow-y': '',
+//         'position': '',
+//         'top': '',
+//         'left': '',
+//         'width': ''
+//       });
+//     }
+//   });
+
+//   // MutationObserver를 사용하여 .select_box의 클래스 변화를 감지
+//   var observer = new MutationObserver(function(mutations) {
+//     mutations.forEach(function(mutation) {
+//       if (mutation.attributeName === 'class') {
+//         $(mutation.target).trigger('classChange');
+//       }
+//     });
+//   });
+
+//   // .select_box 요소들에 대해 MutationObserver를 적용
+//   $('.select_box').each(function() {
+//     observer.observe(this, { attributes: true });
+//   });
+// });
+
+
+// 모바일 상세검색 레이어 searchlayer
+function searchLayer() {
+  // .searchlayer 요소에 left: 0; 스타일 적용
+  $('.searchlayer').css('left', '0');
+  // body에 leftmode 클래스 추가
+  $('body').addClass('leftmode');
+}
+function searchClose() {
+  // .searchlayer 요소의 left 값을 -100%로 초기화하여 숨기기
+  $('.searchlayer').css('left', '-100%');
+  // body에서 leftmode 클래스 제거
+  $('body').removeClass('leftmode');
+}
+
+// 모바일때 클래스 추가하기
+// $(document).ready(function() {
+//   function checkWindowSize() {
+//     if ($(window).width() <= 569) {
+//       $('body').addClass('mo_mode');
+//     } else {
+//       $('body').removeClass('mo_mode');
+//     }
+//   }
+//   // 페이지 로드 시 및 창 크기 변경 시 실행
+//   checkWindowSize();
+//   $(window).resize(function() {
+//     checkWindowSize();
+//   });
+// });
+
 
 
 
