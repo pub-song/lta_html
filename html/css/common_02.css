@@ -316,6 +316,8 @@
 }
 .modal_n_wrap.roll-modal .modal_n_body {
     width: 100%;
+    padding: 40px 16px;
+    background-color: #fff;
 }
 .modal_n_wrap.roll-modal .btn_close {
     width: 19px;
@@ -328,6 +330,17 @@
     top: 22px;
     z-index: 10;
 }
+
+.document-title-ft18 {
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+
+/* margin padding */
 .mt-16 {margin-top: 16px;}
+.mt-32 {margin-top: 32px;}
 .mt-64 {margin-top: 64px;}
 
