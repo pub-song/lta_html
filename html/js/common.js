@@ -1,3 +1,21 @@
+// 모바일때 클래스 추가하기
+$(document).ready(function() {
+  function checkWindowSize() {
+    if ($(window).width() <= 569) {
+      $('body').addClass('mo_mode');
+      $('body').removeClass('pc_mode');
+    } else {
+      $('body').removeClass('mo_mode');
+      $('body').addClass('pc_mode');
+    }
+  }
+  // 페이지 로드 시 및 창 크기 변경 시 실행
+  checkWindowSize();
+  $(window).resize(function() {
+    checkWindowSize();
+  });
+});
+
 // 모달 레이어
 function modalControl(type,id,size){ //type:열기(o),닫기(c) / id: 열 모달의 id / size: 모달 가로 사이즈
 	var $html = $("html");
@@ -86,7 +104,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   var scrollTop = 0; // 현재 스크롤 위치를 저장할 변수
 
-  $('.select_box .option').hover(
+  $('.pc_mode .select_box .option').hover(
     function() {
       // 마우스가 .select_box 위에 있을 때
       scrollTop = $(window).scrollTop(); // 현재 스크롤 위치 저장
@@ -110,6 +128,18 @@ $(document).ready(function() {
       $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
     }
   );
+
+  // .option 영역 내에서 클릭했을 때도 CSS 초기화
+  $('.pc_mode .select_box .option').on('click', function() {
+    $('html').css({
+      'overflow-y': '',
+      'position': '',
+      'top': '',
+      'left': '',
+      'width': ''
+    });
+    $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
+  });
 });
 
 // 모바일에서 select_box 눌렀을때
@@ -171,21 +201,7 @@ function searchClose() {
   $('body').removeClass('leftmode');
 }
 
-// 모바일때 클래스 추가하기
-// $(document).ready(function() {
-//   function checkWindowSize() {
-//     if ($(window).width() <= 569) {
-//       $('body').addClass('mo_mode');
-//     } else {
-//       $('body').removeClass('mo_mode');
-//     }
-//   }
-//   // 페이지 로드 시 및 창 크기 변경 시 실행
-//   checkWindowSize();
-//   $(window).resize(function() {
-//     checkWindowSize();
-//   });
-// });
+
 
 
 
