@@ -157,16 +157,14 @@
             <h3 class="document-title">사무정보</h3>
           </div>
           <div class="right_cont">            
-            <a href="#none" class="btn ico_check_02"><span>사무로 재요청</span></a>
-            <a href="#none" class="btn ico_check_03"><span>비사무로 재요청</span></a>
-            <a href="#none" class="btn ico_check_06"><span>자동생성 재요청</span></a>
+            <a href="#none" class="btn ico_pencil"><span>이력확인</span></a>  
           </div>
         </div>
         <div class="top_info_box mo">
           <div class="btn_cont row03">
-            <span><a href="#none" class="btn type03 ico_check_06"><span>생성 재요청</span></a></span>
-            <span><a href="#none" class="btn type03 ico_check_02"><span>사무로 재요청</span></a></span>
-            <span><a href="#none" class="btn type03 ico_check_03"><span>비사무로<br>재요청</span></a></span>
+            <div class="btn_cont row03">            
+              <span class="float-r"><a href="#none" class="btn type03 ico_penci-bl"   onclick="modalControl('o','#main_layer_pop');return false"><span>이력확인</span></a></span>
+            </div>
           </div>
           <div class="left_cont mt-32">
             <h3 class="document-title">사무정보</h3>
@@ -403,6 +401,77 @@
             </tbody>
           </table>
         </div>
+        <div class="table_cont pc">
+            <table class="table-body-only confirm-table">
+                <colgroup>
+                    <col width="160" />
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />                    
+                    <col width="" />
+                </colgroup>
+                <tbody>             
+                    <tr>
+                        <th class="title-cell">승인요청자</th>
+                        <th>소속</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="소속" class="input-type1-font14" placeholder="소속" title="소속 ">
+                              </span>
+                          </div>                             
+                        </td>
+                        <th>이름</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="이름" class="input-type1-font14" placeholder="이름" title="이름 ">
+                              </span>
+                          </div>                            
+                        </td>
+                        <th>요청날짜</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="2024.07.15" class="input-type1-font14" placeholder="요청날짜" title="요청날짜 ">
+                              </span>
+                          </div>                           
+                        </td>                                                
+                    </tr>      
+                    <tr>
+                        <th class="title-cell">승인자</th>
+                        <th>소속</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="소속" class="input-type1-font14" placeholder="소속" title="소속 ">
+                              </span>
+                          </div>                             
+                        </td>
+                        <th>이름</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="이름" class="input-type1-font14" placeholder="이름"  title="이름 ">
+                              </span>
+                          </div>                            
+                        </td>
+                        <th>승인날짜</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="2024.07.15" class="input-type1-font14" placeholder="승인날짜"  title="승인날짜 ">
+                              </span>
+                          </div>                           
+                        </td>                                                
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+
+
         <div class="top_info_box pc mt-64">
           <div class="left_cont">
             <h3 class="document-title">근거법령 정보</h3>
@@ -429,10 +498,16 @@
                   <th scope="row">법 분야</th>
                   <td>
                     <div class="form-element__wrap multiline">                                
-                      <span class="form-element__inner input-type">
-                        <input type="text" value="" class="input-type1-font14" placeholder="편 - 장 - 절 - 편" title="법 분야1">
+                        <span class="form-element__inner input-type">
+                          <input type="text" value="" class="input-type1-font14" placeholder="법 분야1" title="법 분야1">
+                        </span>                                  
+                        <span class="form-element__inner input-type">
+                          <input type="text" value="" class="input-type1-font14" placeholder="법 분야2" title="법 분야2">
+                        </span>
+                        <span class="form-element__inner input-type">
+                          <input type="text" value="" class="input-type1-font14" placeholder="법 분야3" title="법 분야3 ">
                       </span>
-                    </div>                          
+                    </div>                         
                   </td>                    
                 </tr>
                 <tr>
@@ -607,7 +682,7 @@
                   </td>                  
               </tr>
               <tr>
-                <th scope="row">세부사무유형</th>
+                <th scope="row">세부<br>사무유형</th>
                 <td>
                   <!-- 콤보박스 -->
                   <div class="select_box full">
@@ -704,7 +779,7 @@
                   </div>                            
                 </td>   
               </tr>
-              <tr>
+              <!-- <tr>
                   <th scope="row">수행기관</th>
                   <td>
                     <div class="form-element__wrap">                                
@@ -713,7 +788,7 @@
                         </span>
                     </div>                              
                   </td>                 
-              </tr>
+              </tr> -->
               <tr>
                 <th scope="row">특행기관</th>
                 <td>
@@ -737,7 +812,7 @@
                   <!-- //콤보박스 -->                         
                 </td>   
               </tr>
-              <tr>
+              <!-- <tr>
                   <th scope="row">재수임기관</th>
                   <td>
                     <div class="form-element__wrap">                                
@@ -746,7 +821,7 @@
                         </span>
                     </div>                            
                   </td>                 
-              </tr>
+              </tr> -->
               <tr>
                 <th scope="row">수탁기관</th>
                 <td>
@@ -770,6 +845,82 @@
             </tbody>
           </table>
         </div>
+        <div class="table_cont mo">
+            <table class="table-body-only confirm-table">
+                <colgroup>                  
+                    <col width="110" />
+                    <col width="" />
+                </colgroup>
+                <tbody>             
+                    <tr>
+                        <th class="title-cell" colspan="2">승인요청자</th>
+                    </tr>
+                    <tr>
+                        <th>소속</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="소속" class="input-type1-font14" placeholder="소속" title="소속 ">
+                              </span>
+                          </div>                             
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>이름</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="이름" class="input-type1-font14" placeholder="이름" title="이름 ">
+                              </span>
+                          </div>                            
+                        </td>
+                      </tr>  
+                      <tr>
+                        <th class="last">요청날짜</th>
+                        <td class="last">
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="2024.07.15" class="input-type1-font14" placeholder="요청날짜" title="요청날짜 ">
+                              </span>
+                          </div>                           
+                        </td>                                                
+                    </tr>      
+                    <tr>
+                        <th class="title-cell" colspan="2">승인자</th>
+                    </tr>   
+                    <tr>
+                        <th>소속</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="소속" class="input-type1-font14" placeholder="소속" title="소속 ">
+                              </span>
+                          </div>                             
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>이름</th>
+                        <td>
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="이름" class="input-type1-font14" placeholder="이름"  title="이름 ">
+                              </span>
+                          </div>                            
+                        </td>
+                      </tr>
+                      <tr>  
+                        <th class="last">승인날짜</th>
+                        <td class="last">
+                          <div class="form-element__wrap">                                
+                              <span class="form-element__inner input-type">
+                                  <input type="text" value="2024.07.15" class="input-type1-font14" placeholder="승인날짜"  title="승인날짜 ">
+                              </span>
+                          </div>                           
+                        </td>                                                
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>        
         <div class="top_info_box mo mt-64">
           <div class="left_cont">
             <h3 class="document-title">근거법령 정보</h3>
@@ -874,10 +1025,24 @@
           </table>  
         </div>
 
-        <div class="btn_area txt_align_right pc">
-          <button class="btn btn_cancel"><span>취소</span></button>
-          <button class="btn btn_save"><span>저장</span></button>
-          <button class="btn btn_approval"><span>승인요청</span></button>
+
+        <div class="button__wrap justify-between pc-flex mt-64">
+            <div class="left-button">
+                <button type="button" class="btn-gray-default">
+                    <i></i> 승인취소
+                </button>
+            </div>
+            <div  class="right-button">
+                <button type="button" class="btn-gray-default">
+                    <i class="ico-remove"></i> 취소
+                </button>                  
+                <button type="button" class="btn-gray-default">
+                    <i class="ico-save"></i> 저장
+                </button>  
+                <button type="button" class="btn-primary-default">
+                    <i></i> 승인
+                </button>                                
+            </div>
         </div>
 
         <!-- 모달 -->
@@ -1003,6 +1168,141 @@
             </div>
           </div>
         </section>
+
+        <!-- 이력보기 -->
+        <section class="modal_new modal_overlay roll-type" id="main_layer_pop1"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+          <div class="modal_n_wrap roll-modal">
+            <div class="modal-header">
+                <div class="tit">이력확인</div>
+            </div>
+            <div class="modal_n_body">
+              <div class="pop_cont">
+                  <div class="table-cont  mt-16">
+                      <table class="table-list">
+                          <colgroup>
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />                                                     
+                          </colgroup>
+                          <thead>
+                              <tr>
+                                <th scope="col">날짜</th>
+                                <th scope="col">이력 내용</th>
+                                <th scope="col">소속</th>
+                                <th scope="col">이름</th>                                                           
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>   
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>   
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>                                                                                                                                                                     
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="button__wrap flex-end mt-32">
+                    <button type="button" class="btn-primary-default wd-108">
+                      <i></i> 확인
+                    </button>  
+                </div> 
+              </div>
+              
+              <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 이력작성 -->
+        <section class="modal_new modal_overlay roll-type" id="main_layer_pop2"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+          <div class="modal_n_wrap roll-modal">
+            <div class="modal-header">
+                <div class="tit">이력확인</div>
+            </div>
+            <div class="modal_n_body">
+              <div class="pop_cont">
+                  <div class="table-cont  mt-16">
+                      <table class="table-list">
+                          <colgroup>
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />                                                     
+                          </colgroup>
+                          <thead>
+                              <tr>
+                                <th scope="col">날짜</th>
+                                <th scope="col">이력 내용</th>
+                                <th scope="col">소속</th>
+                                <th scope="col">이름</th>                                                           
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>   
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>   
+                              <tr>
+                                  <td>2024.07.11</td>
+                                  <td>세부사무유형 국가직접사무로 변경</td>
+                                  <td>행정안전부 / 지원과</td>
+                                  <td>김길동</td>
+                              </tr>                                                                                                                                                                     
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="form-element__wrap txtarea_wrap">                      
+                      <span class="form-element__inner text-area">
+                          <textarea  style="height: 100%;" placeholder="입력하세요."></textarea>                          
+                      </span>
+                  </div>                  
+                  <div class="button__wrap flex-end mt-32">
+                    <button type="button" class="btn-gray-default wd-108">
+                      <i class="ico-remove"></i> 취소
+                  </button>  
+                    <button type="button" class="btn-primary-default wd-108">
+                      <i></i> 저장
+                    </button>  
+                </div> 
+              </div>
+              
+              <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
@@ -1133,7 +1433,7 @@
       <!-- <a href="#none" class="btn ico_check_01"><span>변경된<br>사무 확인</span></a> -->
       <a href="#none" class="btn btn_cancel"><span>취소</span></a>
       <a href="#none" class="btn btn btn_save"><span>저장</span></a>
-      <a href="#none" class="btn btn_approval"><span>승인요청</span></a>
+      <a href="#none" class="btn btn_approval"><span>승인</span></a>
     </div>
   </div>
 </div>

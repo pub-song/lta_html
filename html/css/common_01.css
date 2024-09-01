@@ -820,6 +820,10 @@ table .color_gray th{color:#717B8A;}
         /* .footer .foot_btn_area .btn[class*="ico_"] span{height:auto;} */
         .footer .foot_btn_area .btn span{text-align:left;height:auto;}
 
+        
+        /* common_02.css 추가 아니면 수정할부분 */
+        .table_cont .table-body-only tbody td.inner-table .inner-table-cont table tbody tr td:last-child{border-right:0;}
+        .border_r{border-right:1px solid #D8DDE9;}
       }
 
 
