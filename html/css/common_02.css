@@ -128,6 +128,11 @@
     background: url(../img/pc/ico/ico_pencil.png) no-repeat 0 center;
     background-size: contain;
 }
+.btn.ico_pencll-notice span {    
+    background: url(../img/pc/ico/ico_pencll-notice.png) no-repeat 0 center;
+    background-size: contain;
+    color: #706DF0;
+}
 .button__wrap {
     display: flex;
     align-items: center;
@@ -449,6 +454,9 @@
 }
 .table_cont table.table-list thead tr th {
     height: 56px;
+}
+.table_cont table.table-list tr:hover td {
+    background-color: rgba(255, 139, 74, 0.1);
 }
 .table_cont table tbody tr td.text-l {
     text-align: left;
@@ -847,4 +855,57 @@
     background:url(../img/pc/ico/ico_pencil.png) no-repeat 0 center;
     background-size: 24px auto;
     height: 57px;
+}
+
+.select_box.view-option {
+    height: 40px;
+    border-radius: 0;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.select_box.view-option  .select {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    position: relative;
+}
+.select_box.view-option  .select::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    left: 70px;
+    top:1px;
+    background-color: #E1E3E9;
+}
+.select_box.view-option .option {
+    top: 40px;
+}
+
+
+.text-red {
+    color:#FF5858;
+}
+
+.input_cont.multi-el {
+    display: flex;
+    align-items: center;
+}
+.input_cont.multi-el .tit {
+    color:#fff;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    width: 140px;
+    padding: 0 16px;
+    border-left: 1px solid #fff;
+    margin-left:16px;
+}
+.input_cont.multi-el .tit.first-item {
+    padding-left: 0;
+    border-left: 0;
+    margin-left:0px;
 }
