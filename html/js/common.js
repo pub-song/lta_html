@@ -101,46 +101,46 @@ $(document).ready(function() {
 });
 
 // 셀렉트 박스 select_box option 에 마우스가 올라가면 페이지 scroll 생기지 않게 막기
-$(document).ready(function() {
-  var scrollTop = 0; // 현재 스크롤 위치를 저장할 변수
+// $(document).ready(function() {
+//   var scrollTop = 0; // 현재 스크롤 위치를 저장할 변수
 
-  $('.pc_mode .select_box .option').hover(
-    function() {
-      // 마우스가 .select_box 위에 있을 때
-      scrollTop = $(window).scrollTop(); // 현재 스크롤 위치 저장
-      $('html').css({
-        'overflow-y': 'scroll',
-        'position': 'fixed',
-        'top': -scrollTop + 'px', // 현재 스크롤 위치 유지
-        'left': '0px',
-        'width': '100%'
-      });
-    },
-    function() {
-      // 마우스가 .select_box 밖으로 나갔을 때
-      $('html').css({
-        'overflow-y': '',
-        'position': '',
-        'top': '',
-        'left': '',
-        'width': ''
-      });
-      $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
-    }
-  );
+//   $('.pc_mode .select_box .option').hover(
+//     function() {
+//       // 마우스가 .select_box 위에 있을 때
+//       scrollTop = $(window).scrollTop(); // 현재 스크롤 위치 저장
+//       $('html').css({
+//         'overflow-y': 'scroll',
+//         'position': 'fixed',
+//         'top': -scrollTop + 'px', // 현재 스크롤 위치 유지
+//         'left': '0px',
+//         'width': '100%'
+//       });
+//     },
+//     function() {
+//       // 마우스가 .select_box 밖으로 나갔을 때
+//       $('html').css({
+//         'overflow-y': '',
+//         'position': '',
+//         'top': '',
+//         'left': '',
+//         'width': ''
+//       });
+//       $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
+//     }
+//   );
 
-  // .option 영역 내에서 클릭했을 때도 CSS 초기화
-  $('.pc_mode .select_box .option').on('click', function() {
-    $('html').css({
-      'overflow-y': '',
-      'position': '',
-      'top': '',
-      'left': '',
-      'width': ''
-    });
-    $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
-  });
-});
+//   // .option 영역 내에서 클릭했을 때도 CSS 초기화
+//   $('.pc_mode .select_box .option').on('click', function() {
+//     $('html').css({
+//       'overflow-y': '',
+//       'position': '',
+//       'top': '',
+//       'left': '',
+//       'width': ''
+//     });
+//     $(window).scrollTop(scrollTop); // 원래 위치로 스크롤 복원
+//   });
+// });
 
 // 모바일에서 select_box 눌렀을때
 // $(document).ready(function() {
@@ -186,7 +186,6 @@ $(document).ready(function() {
 //   });
 // });
 
-
 // 모바일 상세검색 레이어 searchlayer
 function searchLayer() {
   // .searchlayer 요소에 left: 0; 스타일 적용
@@ -200,6 +199,15 @@ function searchClose() {
   // body에서 leftmode 클래스 제거
   $('body').removeClass('leftmode');
 }
+
+
+
+
+
+
+
+
+
 
 
 

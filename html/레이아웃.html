@@ -19,7 +19,7 @@
   <script src="js/common_02.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap sample">
   <!-- searchlayer 모바일 상세검색 -->
   <div class="searchlayer mo">
     <div class="search_cont">
@@ -36,7 +36,7 @@
       <div class="select_box full">
         <span class="select">기관별</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -49,7 +49,7 @@
       <div class="select_box full">
         <span class="select">분야별</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -62,7 +62,7 @@
       <div class="select_box full">
         <span class="select">사무구분</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -75,7 +75,7 @@
       <div class="select_box full">
         <span class="select">사무유형</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -86,7 +86,6 @@
       </div>
     </div>
   </div>
-  <!--  -->
 
   <!-- header -->
   <div class="header">
@@ -147,7 +146,6 @@
           <a href="#none" class="btn ico_print"><span>프린트</span></a>
         </div>
         <h2 class="title">조사</h2>
-        
         <div class="search_cont pc">
           <span class="search_box">
             <span class="input_cont">
@@ -160,7 +158,7 @@
 
         <div class="search_cont mo">
           <span class="search_box">
-            <span class="input_cont">
+            <span class="input_cont" onclick="searchLayer(this);">
               <input type="text" class="ico_search" placeholder="검색어를 입력해 주세요." readonly>
               <button class="btn_search"><span class="hidden">검색</span></button>
             </span>
@@ -171,10 +169,10 @@
         <div class="search_cont_detail pc">
           <div class="cont">
             <!-- select_box -->
-            <div class="select_box" style="min-width:200px;">
+            <div class="select_box">
               <span class="select">선택함</span>
               <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                   <ul>
                     <li>선택함1</li>
                     <li>선택함2</li>
@@ -184,10 +182,10 @@
               </div>
             </div>
             <!-- select_box -->
-            <div class="select_box" style="min-width:200px;">
+            <div class="select_box">
               <span class="select">선택함</span>
               <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                   <ul>
                     <li>선택함1</li>
                     <li>선택함2</li>
@@ -197,10 +195,10 @@
               </div>
             </div>
             <!-- select_box -->
-            <div class="select_box" style="min-width:200px;">
+            <div class="select_box">
               <span class="select">선택함</span>
               <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                   <ul>
                     <li>선택함1</li>
                     <li>선택함2</li>
@@ -242,7 +240,7 @@
           <span class="total">총 <strong>11,994</strong>건</span>
         </div>
         <!-- table -->
-        <div class="table_cont">
+        <div class="table_cont tb_cursor tb_scroll">
           <table>
             <colgroup>
               <col style="width:5%;">
@@ -415,7 +413,8 @@
         </div>
 
         <!-- paging -->
-        <div class="paging pc">
+        <div class="paging">
+          <a href="#none" class="first"></a>
           <a href="#none" class="prev"></a>
           <ol>
             <li><a href="#none" class="on">1</a></li>
@@ -423,27 +422,9 @@
             <li><a href="#none">3</a></li>
             <li><a href="#none">4</a></li>
             <li><a href="#none">5</a></li>
-            <li><a href="#none">6</a></li>
-            <li><a href="#none">7</a></li>
-            <li><a href="#none">8</a></li>
-            <li><a href="#none">9</a></li>
-            <li><a href="#none">10</a></li>
           </ol>
           <a href="#none" class="next"></a>
-        </div>
-
-        <!-- paging -->
-        <div class="paging mo">
-          <a href="#none" class="prev"></a>
-          <ol>
-            <li><a href="#none" class="on">1</a></li>
-            <li><a href="#none">2</a></li>
-            <li><a href="#none">3</a></li>
-            <li><a href="#none">4</a></li>
-            <li><a href="#none">5</a></li>
-            <li><a href="#none">6</a></li>
-          </ol>
-          <a href="#none" class="next"></a>
+          <a href="#none" class="last"></a>
         </div>
       </div>
     </div>
@@ -463,7 +444,7 @@
             <span class="select">소속기관 누리집 바로가기</span>
             <div class="option">
 
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
                   <li>선택함1</li>
                   <li>선택함2</li>
@@ -476,7 +457,7 @@
           <div class="select_box type02" style="min-width:240px;">
             <span class="select">신하기관 누리집 바로가기</span>
             <div class="option">
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
                   <li>선택함1</li>
                   <li>선택함2</li>
@@ -538,7 +519,7 @@
             <span class="select">소속기관 누리집 바로가기</span>
             <div class="option_wrap">
               <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                   <ul>
                     <li>선택함1</li>
                     <li>선택함2</li>
@@ -555,7 +536,7 @@
           <div class="select_box type02" style="min-width:240px;">
             <span class="select">신하기관 누리집 바로가기</span>
             <div class="option">
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
                   <li>선택함1</li>
                   <li>선택함2</li>
@@ -567,6 +548,14 @@
         </div>
         <p class="copy">ⓒ Ministry of the Interior and Safety. All rights reserved.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="footer mo foot_btn_wrap">
+    <div class="foot_btn_area">
+      <a href="#none" class="btn ico_check_01"><span>변경된<br>사무 확인</span></a>
+      <a href="#none" class="btn ico_check_04"><span>선택<br>승인요청</span></a>
+      <a href="#none" class="btn ico_check_05"><span>선택승인</span></a>
     </div>
   </div>
 </div>

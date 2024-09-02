@@ -19,7 +19,7 @@
   <script src="js/common_02.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap sample">
   <!-- searchlayer 모바일 상세검색 -->
   <div class="searchlayer mo">
     <div class="search_cont">
@@ -36,7 +36,7 @@
       <div class="select_box full">
         <span class="select">기관별</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -49,7 +49,7 @@
       <div class="select_box full">
         <span class="select">분야별</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -62,7 +62,7 @@
       <div class="select_box full">
         <span class="select">사무구분</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -75,7 +75,7 @@
       <div class="select_box full">
         <span class="select">사무유형</span>
         <div class="option">
-          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+          <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul>
               <li>선택함1</li>
               <li>선택함2</li>
@@ -86,7 +86,6 @@
       </div>
     </div>
   </div>
-  <!--  -->
 
   <!-- header -->
   <div class="header">
@@ -165,7 +164,7 @@
         <div class="top_info_box mo">
           <div class="btn_cont row03">
             <span><a href="#none" class="btn type03 ico_check_06"><span>생성 재요청</span></a></span>
-            <span><a href="#none" class="btn type03 ico_check_02"><span>사무로 재요청</span></a></span>
+            <span><a href="#none" class="btn type03 ico_check_02"><span>사무로<br>재요청</span></a></span>
             <span><a href="#none" class="btn type03 ico_check_03"><span>비사무로<br>재요청</span></a></span>
           </div>
           <div class="left_cont mt-32">
@@ -195,7 +194,7 @@
                   <td>
                       <div class="form-element__wrap">                                
                         <span class="form-element__inner input-type">
-                            <input type="text" value="승인완료" class="input-type1-font14" placeholder="사무 검토 상태" title="사무 검토 상태">
+                            <input type="text" value="승인 요청" class="input-type1-font14" placeholder="사무 검토 상태" title="사무 검토 상태" disabled>
                         </span>
                     </div>                          
                   </td>                    
@@ -256,13 +255,20 @@
                     <div class="select_box full">
                         <span class="select">국가작업사무</span>
                         <div class="option">
-                          <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                          <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark">
                             <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
                               <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
                                   <ul>
                                       <li>국가작업사무</li>
                                       <li>선택함2</li>
                                       <li>선택함3</li>
+                                      <li>선택함4</li>
+                                      <li>선택함5</li>
+                                      <li>선택함6</li>
+                                      <li>선택함7</li>
+                                      <li>선택함8</li>
+                                      <li>선택함9</li>
+                                      <li>선택함10</li>
                                   </ul>
                               </div>
                           </div>
@@ -378,7 +384,8 @@
                     <div class="form-element__wrap">                                
                         <span class="form-element__inner input-type">
                             <input type="text" value="-" class="input-type1-font14" placeholder="재수임기관" title="재수임기관 ">
-                        </span>
+                          </span>
+                          <span class="noti_txt red">이전값 ' 전주시'</span>
                     </div>                            
                   </td>
                   <th scope="row">수탁기관</th>
@@ -393,11 +400,7 @@
               <tr>
                   <th scope="row">비고</th>
                   <td colspan="3">
-                    <div class="form-element__wrap">                                
-                        <span class="form-element__inner input-type">
-                            <input type="text" value="근거규정 참조하여 작성함" class="input-type1-font14" placeholder="비고" title="비고 ">
-                        </span>
-                    </div>                              
+                    <textarea name="" id="" value="근거규정 참조하여 작성함"></textarea>
                   </td>               
               </tr>                                                                                                                                                               
             </tbody>
@@ -571,7 +574,7 @@
                 <td>
                     <div class="form-element__wrap">                                
                       <span class="form-element__inner input-type">
-                          <input type="text" value="승인완료" class="input-type1-font14" placeholder="사무 검토 상태" title="사무 검토 상태">
+                          <input type="text" value="승인완료" class="input-type1-font14" placeholder="사무 검토 상태" title="사무 검토 상태" disabled>
                       </span>
                   </div>                          
                 </td>    
@@ -760,11 +763,7 @@
               <tr>
                   <th scope="row">비고</th>
                   <td>
-                    <div class="form-element__wrap">                                
-                        <span class="form-element__inner input-type">
-                            <input type="text" value="근거규정 참조하여 작성함" class="input-type1-font14" placeholder="비고" title="비고 ">
-                        </span>
-                    </div>                              
+                    <textarea name="" id="" value="근거규정 참조하여 작성함"></textarea>
                   </td>               
               </tr>                                                                                                                                                               
             </tbody>
@@ -993,7 +992,7 @@
                       </table>
                   </div>  
                   <div class="button__wrap flex-end mt-32">
-                      <button type="button" class="btn-primary-default wd-108">
+                      <button type="button" class="btn-primary-default wd-108" onclick="modalControl('c')">
                         <i></i> 확인
                       </button>  
                   </div>  
@@ -1008,7 +1007,7 @@
   </div>
 
   <!-- footer -->
-  <div class="footer pc">
+  <div class="footer">
     <div class="inner">
       <div class="top_info float_box">
         <div class="left_cont">
@@ -1021,7 +1020,7 @@
             <span class="select">소속기관 누리집 바로가기</span>
             <div class="option">
 
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
                   <li>선택함1</li>
                   <li>선택함2</li>
@@ -1034,8 +1033,11 @@
           <div class="select_box type02" style="min-width:240px;">
             <span class="select">신하기관 누리집 바로가기</span>
             <div class="option">
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
+                  <li>선택함1</li>
+                  <li>선택함2</li>
+                  <li>선택함3</li>
                   <li>선택함1</li>
                   <li>선택함2</li>
                   <li>선택함3</li>
@@ -1096,7 +1098,7 @@
             <span class="select">소속기관 누리집 바로가기</span>
             <div class="option_wrap">
               <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                   <ul>
                     <li>선택함1</li>
                     <li>선택함2</li>
@@ -1113,7 +1115,7 @@
           <div class="select_box type02" style="min-width:240px;">
             <span class="select">신하기관 누리집 바로가기</span>
             <div class="option">
-              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow: visible;height:100px">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
                   <li>선택함1</li>
                   <li>선택함2</li>
