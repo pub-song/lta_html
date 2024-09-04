@@ -69,6 +69,37 @@
     line-height: 16px;
     letter-spacing: -0.02em;
 }
+.form-element__wrap .input-multi {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+.form-element__wrap .input-multi .form-element__inner.input-type {
+    flex: 1;
+}
+.form-element__wrap .input-multi .input-unit {
+    width: fit-content;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: #222;
+}
+.form-element__wrap .input-multi .input-text-count {
+    width: 65px;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: #222;
+    text-align: right;
+}
+.form-element__wrap .input-multi .input-text-count .current {
+    color: #FF8B4A;
+}
 .form-element__wrap.multiline {
     flex-direction: row;
 }
@@ -197,6 +228,14 @@
     background: url('../img/pc/ico/ico_btn_cancel.png') no-repeat;
     background-size: contain;
 }
+.btn-gray-default i.ico-delete::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/icon_remove.png') no-repeat;
+    background-size: contain;
+}
 .btn-gray-default i.ico-save::before {
     content: '';
     display: block;
@@ -286,7 +325,93 @@
     background: url(../img/pc/ico/ico_list.png) no-repeat 0 center;
     background-size: 15px auto;
 }
+.icon-file {
+    width:20px;
+    height:20px;
+    display: inline-flex;
+}
+.icon-file::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/icon_file.png') no-repeat;
+    background-size: contain;
+}
+.ico-minus {
+    width:20px;
+    height:20px;
+    display: inline-flex;
+}
+.ico-minus::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/icon_minus.png') no-repeat;
+    background-size: contain;
+}
+.ico-plus {
+    width:20px;
+    height:20px;
+    display: inline-flex;
+}
+.ico-plus::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pc/ico/icon_plus.png') no-repeat;
+    background-size: contain;
+}
+.btn-border-gray {
+    border: 1px solid #D8DDE9;
+    background-color: #fff;
+    min-width: 103px;
+    height: 36px;
+    padding: 8px 12px;
+    gap: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+}
+.btn-dark-light {
+    border: 1px solid #D8DDE9;
+    background-color: #D8DDE9;
+    color:#222;
+    min-width: 63px;
+    height: 36px;
+    padding: 8px 12px;
+    gap: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-self: center;  
+}
 
+.file-list {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.file-list li {
+    position: relative;
+}
+.file-list li .file {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 525px;
+    opacity: 0;
+}
+
+.ui-datepicker-trigger {
+    width: 24px;
+}
+.ui-widget.ui-widget-content {
+    z-index: 20 !important;
+}
 /* //테이블 */
 
 .table_cont .table-body-only {
@@ -589,7 +714,7 @@
     background-color: #AEB7C6;
     transform: translate(-50%, -50%);
 }
-.tree-menu-wrap .tree-list .haschildren.is-active i::after {
+.tree-menu-wrap .tree-list .haschildren i i::after {
     content: '';
     width:1px;
     height: 10px;
@@ -600,7 +725,7 @@
     background-color: #AEB7C6;
     transform: translate(-50%, -50%);
 }
-.tree-menu-wrap .tree-list .haschildren.is-active i::after {
+.tree-menu-wrap .tree-list .haschildren i.is-active::after {
     display: none;
 }
 .tree-tab-head {
@@ -633,6 +758,12 @@
 }
 .document-title-area {
     display: none;
+}
+
+.data-pick-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 @media (max-width: 768px) {
@@ -835,6 +966,17 @@
     letter-spacing: -0.02em;
     color:#222;
 }
+
+.edit-wrap {
+    width: 100%;
+    height: 480px;
+}
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* margin padding */
 .mt-8 {margin-top: 8px;}
 .mt-16 {margin-top: 16px;}
@@ -848,3 +990,4 @@
     background-size: 24px auto;
     height: 57px;
 }
+
