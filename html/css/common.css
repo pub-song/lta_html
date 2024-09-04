@@ -38,3 +38,31 @@ body{font-family:'Pretendard','Noto Sans KR',Dotum,sans-serif;font-size:14px;col
 		url("../font/Pretendard-SemiBold.woff") format("woff"), /* Modern Browsers */
 		url("../font/Pretendard-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
 }
+/* Montserrat */
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Montserrat-Light"),
+		url("../font/Montserrat-Light.woff2") format("woff2"), /* Super Modern Browsers */
+		url("../font/Montserrat-Light.woff") format("woff"), /* Modern Browsers */
+		url("../font/Montserrat-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Montserrat-Light"),
+		url("../font/Montserrat-Regular.woff2") format("woff2"), /* Super Modern Browsers */
+		url("../font/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+		url("../font/Montserrat-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	src: local("Montserrat-SemiBold"),
+		url("../font/Montserrat-SemiBold.woff2") format("woff2"), /* Super Modern Browsers */
+		url("../font/Montserrat-SemiBold.woff") format("woff"), /* Modern Browsers */
+		url("../font/Montserrat-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}

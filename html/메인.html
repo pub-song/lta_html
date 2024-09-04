@@ -146,47 +146,7 @@
           </span>
         </div>
         <div class="inner">
-          <!-- Swiper -->
-          <!-- <div class="swiper_wrap type01">
-            <div class="swiper mySwiper ad_mid_banner">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
-                <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
-                <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
-                <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
-              </div>
-              <div class="sw_bts">
-                <div class="swiper-button-next"><img src="img/pc/swiper/btn_right.png" alt=""></div>
-                <div class="swiper-button-prev"><img src="img/pc/swiper/btn_left.png" alt=""></div>
-                <div class="swiper-pagination type01"></div>
-                <div class="swiper-autoplay-button">
-                  <img src="img/pc/swiper/btn_pause.png" alt="" class="pause">
-                  <img src="img/pc/swiper/btn_play.png" alt="" class="play">
-                </div>
-              </div>
-            </div>
-            <script>
-              var adMidBanner = new Swiper(".ad_mid_banner.swiper", {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                pagination: {
-                  el: ".ad_mid_banner .swiper-pagination",
-                  type: "fraction", // or 'bullets', 'progressbar', or other available types
-                },
-                navigation: {
-                  nextEl: ".ad_mid_banner .swiper-button-next",
-                  prevEl: ".ad_mid_banner .swiper-button-prev",
-                },
-                // autoplay 설정
-                autoplay: {
-                  delay: 2000,
-                  disableOnInteraction: false,
-                },
-              });
-            </script>
-          </div> -->
-
-          <div class="swiper_wrap">
+          <div class="swiper_wrap pc">
             <div class="swiper mySwiper type01" id="swiper1">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
@@ -236,6 +196,57 @@
               });
             </script>
           </div>
+
+          <div class="swiper_wrap mo">
+            <div class="swiper mySwiper type01" id="mo_swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="img/mo/banner/banner_01.png" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="img/mo/banner/banner_01.png" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="img/mo/banner/banner_01.png" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="img/mo/banner/banner_01.png" alt=""></a></div>
+              </div>
+              <div class="sw_bts">
+                <div class="swiper-button-next"><img src="img/mo/swiper/btn_sw_right.png" alt=""></div>
+                <div class="swiper-button-prev"><img src="img/mo/swiper/btn_sw_left.png" alt=""></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-autoplay-button">
+                  <img src="img/mo/swiper/btn_sw_pause.png" alt="" class="pause">
+                  <img src="img/mo/swiper/btn_sw_play.png" alt="" class="play">
+                </div>
+              </div>
+            </div>
+            <script>
+              var mo_swiper1 = new Swiper("#mo_swiper1", {
+                slidesPerView: 1, // 한번에 보여지는 슬라이드 숫자
+                slidesPerGroup: 1, // 한번에 이동되는 슬라이드 숫자
+                loop: true,
+                // autoplay: {
+                //   delay: 3000,
+                //   disableOnInteraction: false,
+                // },
+                navigation: {
+                  nextEl: "#mo_swiper1 .swiper-button-next",
+                  prevEl: "#mo_swiper1 .swiper-button-prev",
+                },
+                pagination: {
+                  el: "#mo_swiper1 .swiper-pagination",
+                  type: "fraction",
+                  clickable: true,
+                }
+              });
+              // mo_swiper1의 일시정지 및 재생 제어
+              $("#mo_swiper1 .swiper-autoplay-button .pause").on("click", function() {
+                mo_swiper1.autoplay.stop();
+                $(this).hide();
+                $("#mo_swiper1 .swiper-autoplay-button .play").show();
+              });
+              $("#mo_swiper1 .swiper-autoplay-button .play").on("click", function() {
+                mo_swiper1.autoplay.start();
+                $(this).hide();
+                $("#mo_swiper1 .swiper-autoplay-button .pause").show();
+              });
+            </script>
+          </div>
         </div>
       </div>
       <!-- 공지사항, 자료실 -->
@@ -245,8 +256,11 @@
             <!-- 공지사항 -->
             <div class="box">
               <div class="txt_box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="69" viewBox="0 0 200 69" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="69" viewBox="0 0 200 69" fill="none" class="pc">
                   <path d="M0 24C0 10.7452 10.7452 0 24 0H167.851C176.485 0 184.453 4.63724 188.718 12.1438L200 32V45C200 58.2548 189.255 69 176 69H0V24Z" fill="#D5D4FB"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="144" height="69" viewBox="0 0 144 69" fill="none" class="mo">
+                  <path d="M0 24C0 10.7452 10.7452 0 24 0H114.389C124.143 0 132.928 5.9039 136.611 14.936L143.571 32V45C143.571 58.2548 132.826 69 119.571 69H0V24Z" fill="#D5D4FB"/>
                 </svg>
                 <strong class="tit">공지사항</strong>
                 <span class="txt">지방이양사무에서 꼭 알아야 하는 정보</span>
@@ -256,8 +270,11 @@
             <!-- 자료실 -->
             <div class="box">
               <div class="txt_box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="69" viewBox="0 0 200 69" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="69" viewBox="0 0 200 69" fill="none" class="pc">
                   <path d="M0 24C0 10.7452 10.7452 0 24 0H167.851C176.485 0 184.453 4.63724 188.718 12.1438L200 32V45C200 58.2548 189.255 69 176 69H0V24Z" fill="#BBD2FF"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="144" height="69" viewBox="0 0 144 69" fill="none" class="mo">
+                  <path d="M0 24C0 10.7452 10.7452 0 24 0H114.389C124.143 0 132.928 5.9039 136.611 14.936L143.571 32V45C143.571 58.2548 132.826 69 119.571 69H0V24Z" fill="#BBD2FF"/>
                 </svg>
                 <strong class="tit">자료실</strong>
                 <span class="txt">이양사무에 관련된 서식, 자료</span>
@@ -272,7 +289,7 @@
         <div class="inner">
           <strong class="tit"><span>과제이력관리 현황</span></strong>
         </div>
-        <div class="swiper_wrap inner">
+        <div class="swiper_wrap inner pc">
           <div class="swiper mySwiper type03" id="swiper2">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -371,40 +388,145 @@
             });
           </script>
         </div>
+        <div class="swiper_wrap inner mo">
+          <div class="swiper mySwiper type03" id="mo_swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <ul class="history_cont">
+                  <li>
+                    <a href="#none">
+                      <div class="tit_cont">
+                        <span class="tit">농림축산식품부</span>
+                        <span class="ico_round color_orange">의견수렴완료 / 심의요청 전</span>
+                      </div>
+                      <div class="info_cont">
+                        <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
+                        <span class="ico_round color_gray">국가 → 시도</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="history_cont">
+                  <li>
+                    <a href="#none">
+                      <div class="tit_cont">
+                        <span class="tit">농림축산식품부</span>
+                        <span class="ico_round color_green">심의요청완료 / 전문위 심의중</span>
+                      </div>
+                      <div class="info_cont">
+                        <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
+                        <span class="ico_round color_gray">국가 → 시도</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="history_cont">
+                  <li>
+                    <a href="#none">
+                      <div class="tit_cont">
+                        <span class="tit">농림축산식품부</span>
+                        <span class="ico_round color_purple">전문위 심의완료 / 분과위 심의중</span>
+                      </div>
+                      <div class="info_cont">
+                        <strong class="tit">농업진흥진역 해제에 관한 법률</strong>
+                        <span class="ico_round color_gray">국가 → 시도</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <script>
+            var mo_swiper2 = new Swiper("#mo_swiper2", {
+              slidesPerView: 1, // 한번에 보여지는 슬라이드 숫자
+              slidesPerGroup: 1, // 한번에 이동되는 슬라이드 숫자
+              loop: true,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }
+            });
+          </script>
+        </div>
       </div>
       <!-- 사무 배분 현황 -->
-      <div class="graph_cont bg_gray">
+      <div class="graph_cont">
         <div class="inner">
-          <div class="tit_cont">
-            <strong class="tit">사무 배분 현황</strong>
-            <span class="total">총 <span>60,000</span>건</span>
+          <div class="content">
+            <div class="tit_cont">
+              <strong class="tit bar">사무 배분 현황</strong>
+              <span class="total">총 <span>60,000</span>건</span>
+            </div>
+            <ul>
+              <li>
+                <span class="tit">국가사무</span>
+                <span class="line_cont">
+                  <div class="view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72" fill="none" class="pc">
+                      <path d="M64 32C64 46.9107 53.8018 59.4395 40 62.9919C36.6595 63.8516 34.3652 67.8143 32.8258 70.5537C32.456 71.2118 31.544 71.2118 31.1742 70.5537C29.6348 67.8143 27.3405 63.8516 24 62.9919C10.1982 59.4395 0 46.9107 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="48" viewBox="0 0 42 48" fill="none" class="mo">
+                      <path d="M42 21.3333C42 31.2738 35.3074 39.6263 26.25 41.9946C24.2556 42.516 22.8294 44.7497 21.8276 46.5237C21.4534 47.1864 20.5466 47.1864 20.1724 46.5237C19.1706 44.7497 17.7444 42.516 15.75 41.9946C6.69256 39.6263 0 31.2738 0 21.3333C0 9.55126 9.40202 0 21 0C32.598 0 42 9.55126 42 21.3333Z" fill="white"/>
+                    </svg>
+                    <span class="percent">35%</span>
+                  </div>
+                  <span class="line"></span>
+                </span>
+                <span class="num"><strong>31,000</strong>건</span>
+              </li>
+              <li>
+                <span class="tit">공동사무</span>
+                <span class="line_cont">
+                  <div class="view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72" fill="none" class="pc">
+                      <path d="M64 32C64 46.9107 53.8018 59.4395 40 62.9919C36.6595 63.8516 34.3652 67.8143 32.8258 70.5537C32.456 71.2118 31.544 71.2118 31.1742 70.5537C29.6348 67.8143 27.3405 63.8516 24 62.9919C10.1982 59.4395 0 46.9107 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="48" viewBox="0 0 42 48" fill="none" class="mo">
+                      <path d="M42 21.3333C42 31.2738 35.3074 39.6263 26.25 41.9946C24.2556 42.516 22.8294 44.7497 21.8276 46.5237C21.4534 47.1864 20.5466 47.1864 20.1724 46.5237C19.1706 44.7497 17.7444 42.516 15.75 41.9946C6.69256 39.6263 0 31.2738 0 21.3333C0 9.55126 9.40202 0 21 0C32.598 0 42 9.55126 42 21.3333Z" fill="white"/>
+                    </svg>
+                    <span class="percent">35%</span>
+                  </div>
+                  <span class="line"></span>
+                </span>
+                <span class="num"><strong>18,000</strong>건</span>
+              </li>
+              <li>
+                <span class="tit">자차사무</span>
+                <span class="line_cont">
+                  <div class="view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72" fill="none" class="pc">
+                      <path d="M64 32C64 46.9107 53.8018 59.4395 40 62.9919C36.6595 63.8516 34.3652 67.8143 32.8258 70.5537C32.456 71.2118 31.544 71.2118 31.1742 70.5537C29.6348 67.8143 27.3405 63.8516 24 62.9919C10.1982 59.4395 0 46.9107 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="48" viewBox="0 0 42 48" fill="none" class="mo">
+                      <path d="M42 21.3333C42 31.2738 35.3074 39.6263 26.25 41.9946C24.2556 42.516 22.8294 44.7497 21.8276 46.5237C21.4534 47.1864 20.5466 47.1864 20.1724 46.5237C19.1706 44.7497 17.7444 42.516 15.75 41.9946C6.69256 39.6263 0 31.2738 0 21.3333C0 9.55126 9.40202 0 21 0C32.598 0 42 9.55126 42 21.3333Z" fill="white"/>
+                    </svg>
+                    <span class="percent">35%</span>
+                  </div>
+                  <span class="line"></span>
+                </span>
+                <span class="num"><strong>31,000</strong>건</span>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <span class="tit">국가사무</span>
-              <span class="bar_cont"><span class="bar" style="width:35%">35%</span></span>
-              <span class="num"><strong>31,000</strong>건</span>
-            </li>
-            <li>
-              <span class="tit">공동사무</span>
-              <span class="bar_cont"><span class="bar" style="width:30%">30%</span></span>
-              <span class="num"><strong>18,000</strong>건</span>
-            </li>
-            <li>
-              <span class="tit">자차사무</span>
-              <span class="bar_cont"><span class="bar" style="width:35%">35%</span></span>
-              <span class="num"><strong>31,000</strong>건</span>
-            </li>
-          </ul>
         </div>
       </div>
       <!-- 이양사무 이용안내/문의하기/자주하는 질문 -->
       <div class="bottom_link_cont">
         <div class="inner">
           <ul>
-            <li><a href="#none">이양사무 이용안내</a></li>
-            <li><a href="#none">문의하기</a></li>
-            <li><a href="#none">건의하기</a></li>
+            <li><a href="#none" class="txt"><span>이양사무 이용안내</span></a></li>
+            <li><a href="#none" class="txt"><span>문의하기</a></li>
+            <li><a href="#none" class="txt"><span>자주하는 질문</a></li>
           </ul>
         </div>
       </div>
@@ -427,9 +549,16 @@
 
               <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
-                  <li>선택함1</li>
-                  <li>선택함2</li>
-                  <li>선택함3</li>
+                  <li>지방자치인재개발원</li>
+                  <li>국가기록원</li>
+                  <li>정부청사관리본부</li>
+                  <li>이북5도</li>
+                  <li>주민등록번호변경위원회</li>
+                  <li>국가민방위재난안전교육원</li>
+                  <li>대통령기록관</li>
+                  <li>국립과학수사연구원</li>
+                  <li>국가정보자원관리원</li>
+                  <li>국립재난안전연구원</li>
                 </ul>
               </div>
             </div>
@@ -440,9 +569,16 @@
             <div class="option">
               <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
-                  <li>선택함1</li>
-                  <li>선택함2</li>
-                  <li>선택함3</li>
+                  <li>한국지능정보사회진흥원</li>
+                  <li>민주화운동기념사업회</li>
+                  <li>일제강제동원피해자지원재단</li>
+                  <li>한국지방행정연구원</li>
+                  <li>대한지방행정공제회</li>
+                  <li>한국지방재정공제회</li>
+                  <li>한국지역정보개발원</li>
+                  <li>지방공기업평가원</li>
+                  <li>한국승강기안전공단</li>
+                  <li>한국섬진흥원</li>
                 </ul>
               </div>
             </div>
