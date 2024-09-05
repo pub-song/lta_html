@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="modal-open">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,47 +86,95 @@
       </div>
     </div>
   </div>
-  <!--  -->
+  <!-- mypagelayer 모바일 마이페이지 -->
+  <div class="mypagelayer mo">
+    <div class="mypage_cont">
+      <span class="mypage_box">
+        <span class="tit">마이페이지</span>
+        <button class="btn_layer_close" onclick="mypageClose();"><span class="hidden">닫기</span></button>
+      </span>
+    </div>
+    <div class="content_wrap">
+      <div class="user_info">
+        <span class="rank"><strong>7</strong>등급</span>
+        <span class="user"><strong>김길동</strong>님 </span>
+      </div>
+      <div class="box">
+        <span class="tit"><span>나의 업무</span></span>
+        <ul>
+          <li><a href="#none">사무승인요청<span class="num">(24)</span></a></li>
+          <li><a href="#none">이양관리<span class="num">(24)</span></a></li>
+          <li><a href="#none">이행상황관리<span class="num">(24)</span></a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <span class="tit"><span>나의 업무</span></span>
+        <ul>
+          <li><a href="#none">이양문의</a></li>
+          <li><a href="#none">진행 상황문의</a></li>
+          <li><a href="#none">이양진행 내역 관련 문의</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <span class="tit"><span>나의 업무</span></span>
+        <ul>
+          <li><a href="#none">이양문의</a></li>
+          <li><a href="#none">진행 상황문의</a></li>
+          <li><a href="#none">이양진행 내역 관련 문의</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <span class="tit"><span>나의 업무</span></span>
+        <ul>
+          <li><a href="#none">최근 다운 게시물 제목1</a></li>
+          <li><a href="#none">최근 다운 게시물 제목2</a></li>
+          <li><a href="#none">최근 다운 게시물 제목3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  <!-- header -->
-  <div class="header">
-    <div class="inner">
-      <div class="header_cont">
-        <div class="header_top_cont">
-          <h1 class="logo"><a href="#none">지방이양사무관리시스템</a></h1>
-          <div class="right_cont mo">
-            <button class="btn_search" onclick="searchLayer(this);"><span class="hidden">검색</span></button>
-            <button class="btn_login"><span class="hidden">로그인</span></button>
-            <button class="btn_menu"><span class="hidden">메뉴</span></button>
+  <!-- header_wrap -->
+  <div class="header_wrap">
+    <div class="header">
+      <div class="inner">
+        <div class="header_cont">
+          <div class="header_top_cont">
+            <h1 class="logo"><a href="#none">지방이양사무관리시스템</a></h1>
+            <div class="right_cont mo">
+              <button class="btn_search" onclick="searchLayer(this);"><span class="hidden">검색</span></button>
+              <button class="btn_login"><span class="hidden">로그인</span></button>
+              <button class="btn_menu" onclick="mypagelayer(this);"><span class="hidden">메뉴</span></button>
+            </div>
           </div>
-        </div>
-        <div class="top_menu_cont">
-          <ul class="menu">
-            <li><a href="#none" class="on">법령</a></li>
-            <li><a href="#none">조사</a></li>
-            <li><a href="#none">사무</a></li>
-            <li><a href="#none">이양사무</a></li>
-            <li><a href="#none">통계</a></li>
-            <li><a href="#none">대국민 포털관리</a></li>
-            <li><a href="#none">시스템 관리</a></li>
-          </ul>
-        </div>
-        <!-- 로그인/회원가입 버튼 -->
-        <div class="info_cont" style="display: none;">
-          <span class="bar"><a href="#none" class="ico_login"><span>로그인</span></a></span>
-          <span><a href="#none" class="ico_join"><span>회원가입</span></a></span>
-        </div>
+          <div class="top_menu_cont">
+            <ul class="menu">
+              <li><a href="#none" class="on">법령</a></li>
+              <li><a href="#none">조사</a></li>
+              <li><a href="#none">사무</a></li>
+              <li><a href="#none">이양사무</a></li>
+              <li><a href="#none">통계</a></li>
+              <li><a href="#none">대국민 포털관리</a></li>
+              <li><a href="#none">시스템 관리</a></li>
+            </ul>
+          </div>
+          <!-- 로그인/회원가입 버튼 -->
+          <div class="info_cont" style="display: none;">
+            <span class="bar"><a href="#none" class="ico_login"><span>로그인</span></a></span>
+            <span><a href="#none" class="ico_join"><span>회원가입</span></a></span>
+          </div>
 
-        <!-- 마이페이지/사용자/로그아웃 -->
-        <div class="info_cont pc">
-          <ul class="info_menu">
-            <li class="bar"><a href="#none">마이페이지</a></li>
-          </ul>
-          <span class="user"><strong>홍길동</strong>님 <span class="rank"><strong>7</strong>등급</span></span>
-          <button class="btn_log">
-            <span class="txt">로그아웃</span>
-            <span class="time">09:55</span>
-          </button>
+          <!-- 마이페이지/사용자/로그아웃 -->
+          <div class="info_cont pc">
+            <ul class="info_menu">
+              <li class="bar"><a href="#none">마이페이지</a></li>
+            </ul>
+            <span class="user"><strong>홍길동</strong>님 <span class="rank"><strong>7</strong>등급</span></span>
+            <button class="btn_log">
+              <span class="txt">로그아웃</span>
+              <span class="time">09:55</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -634,18 +682,20 @@
           <!-- select_box -->
           <div class="select_box type02" style="min-width:240px;">
             <span class="select">소속기관 누리집 바로가기</span>
-            <div class="option_wrap">
-              <div class="option">
-                <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
-                  <ul>
-                    <li>선택함1</li>
-                    <li>선택함2</li>
-                    <li>선택함3</li>
-                    <li>선택함3</li>
-                    <li>선택함3</li>
-                    <li>선택함3</li>
-                  </ul>
-                </div>
+            <div class="option">
+              <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
+                <ul>
+                  <li>지방자치인재개발원</li>
+                  <li>국가기록원</li>
+                  <li>정부청사관리본부</li>
+                  <li>이북5도</li>
+                  <li>주민등록번호변경위원회</li>
+                  <li>국가민방위재난안전교육원</li>
+                  <li>대통령기록관</li>
+                  <li>국립과학수사연구원</li>
+                  <li>국가정보자원관리원</li>
+                  <li>국립재난안전연구원</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -655,9 +705,16 @@
             <div class="option">
               <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
                 <ul>
-                  <li>선택함1</li>
-                  <li>선택함2</li>
-                  <li>선택함3</li>
+                  <li>한국지능정보사회진흥원</li>
+                  <li>민주화운동기념사업회</li>
+                  <li>일제강제동원피해자지원재단</li>
+                  <li>한국지방행정연구원</li>
+                  <li>대한지방행정공제회</li>
+                  <li>한국지방재정공제회</li>
+                  <li>한국지역정보개발원</li>
+                  <li>지방공기업평가원</li>
+                  <li>한국승강기안전공단</li>
+                  <li>한국섬진흥원</li>
                 </ul>
               </div>
             </div>
@@ -668,13 +725,48 @@
     </div>
   </div>
 
-  <div class="footer mo foot_btn_wrap">
+  <!-- <div class="footer mo foot_btn_wrap">
     <div class="foot_btn_area">
       <a href="#none" class="btn ico_check_01"><span>변경된<br>사무 확인</span></a>
       <a href="#none" class="btn ico_check_04"><span>선택<br>승인요청</span></a>
       <a href="#none" class="btn ico_check_05"><span>선택승인</span></a>
     </div>
-  </div>
+  </div> -->
+
+  <!-- btn_top -->
+  <button id="top"><span class="hidden">위로 이동</span></button>
+
+  <!-- layerPopup -->
+  <!-- 하단 메인 팝업 영역 -->
+  <section class="modal_new modal_overlay modal_on mo" id="main_banner_pop"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+    
+    <div class="modal_n_wrap roll-modal">
+      <div class="modal-header">
+          <div class="tit">법령개정정보</div>
+      </div>
+      <div class="modal_n_body">
+        <div class="pop_cont">
+          sdfsdfsf
+        </div>
+        <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- <div class="modal_n_wrap">
+      <div class="modal_n_body">
+        <div class="pop_cont">
+          테스트
+        </div>
+        <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+      </div>
+    </div> -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+  </section>
+  <!-- //하단 메인 팝업 영역 -->
 </div>
 </body>
 </html>

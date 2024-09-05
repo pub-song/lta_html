@@ -1,7 +1,7 @@
 // 모바일때 클래스 추가하기
 $(document).ready(function() {
   function checkWindowSize() {
-    if ($(window).width() <= 569) {
+    if ($(window).width() <= 480) {
       $('body').addClass('mo_mode');
       $('body').removeClass('pc_mode');
     } else {
@@ -13,6 +13,40 @@ $(document).ready(function() {
   checkWindowSize();
   $(window).resize(function() {
     checkWindowSize();
+  });
+});
+
+// 탑버튼
+$(document).ready(function() {
+  var lastScrollTop = 0; // 마지막 스크롤 위치를 저장할 변수
+
+  // 'top' 버튼 클릭 시 화면 최상단으로 스크롤
+  $('#top').click(function() {
+    window.scroll({
+       top: 0,
+       left: 0,
+       behavior: "smooth"
+     });
+  });
+
+  // 스크롤 위치에 따라 'top' 버튼 표시/숨김
+  $(window).scroll(function() {
+    var currentScrollTop = $(this).scrollTop();
+
+    // 스크롤 위치가 상위 100 이하인 경우 버튼 숨김
+    if (currentScrollTop <= 100) {
+      $('#top').fadeOut();
+    } else {
+      // 스크롤 내리기: 버튼 숨김
+      if (currentScrollTop > lastScrollTop) {
+        $('#top').fadeOut();
+      } else { // 스크롤 올리기: 버튼 보임
+        $('#top').fadeIn();
+      }
+    }
+
+    // 현재 스크롤 위치를 마지막 스크롤 위치로 업데이트
+    lastScrollTop = currentScrollTop;
   });
 });
 
@@ -200,6 +234,19 @@ function searchClose() {
   $('body').removeClass('leftmode');
 }
 
+// 모바일 마이페이지 레이어 mypagelayer
+function mypagelayer() {
+  // .mypagelayer 요소에 left: 0; 스타일 적용
+  $('.mypagelayer').css('left', '0');
+  // body에 leftmode 클래스 추가
+  $('body').addClass('leftmode');
+}
+function mypageClose() {
+  // .mypagelayer 요소의 left 값을 -100%로 초기화하여 숨기기
+  $('.mypagelayer').css('left', '-100%');
+  // body에서 leftmode 클래스 제거
+  $('body').removeClass('leftmode');
+}
 
 
 
