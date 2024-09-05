@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         twoDepthMenuButtons.forEach(menu => {
-            menu.addEventListener('click', () => {
+            menu.addEventListener('click', (event) => {
+                event.preventDefault();
                 menu.classList.toggle('is-active');
                 if (menu.parentElement.nextElementSibling) {
                     menu.parentElement.nextElementSibling.classList.toggle('is-active');
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     
         treeDepthMenus.forEach(menu => {
-            menu.addEventListener('click', () => {
+            menu.addEventListener('click', (event) => {
+                event.preventDefault();
                 const activeItem = container.querySelector('.tree-menu li.is-active');
                 if (activeItem) {
                     activeItem.classList.remove('is-active');
@@ -55,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         depthTreeMenus.forEach(menu => {
-            menu.addEventListener('click', () => {
+            menu.addEventListener('click', (event) => {
+                event.preventDefault();
                 menu.classList.toggle('is-active');
                 if (menu.parentElement.nextElementSibling) {
                     menu.parentElement.nextElementSibling.classList.toggle('is-active');
