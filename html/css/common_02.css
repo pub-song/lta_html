@@ -156,6 +156,13 @@
     font-weight: 400;
     line-height: 20px;
 }
+
+.form-element__inner.text-area textarea {
+    padding: 0;
+    font-size: 16px;
+    border-radius: 0;
+}
+
 .document-title {
     font-family: 'Pretendard';
     font-size: 24px;
@@ -534,6 +541,10 @@
 }
 .table_cont table.table-list tbody tr td.text-l {
     text-align: left;
+}
+
+.table-fixed {
+    table-layout: fixed;
 }
 
 /* 모달 */
@@ -1073,3 +1084,12 @@
     height: 57px;
 }
 
+.btn_delete span {
+    background:#fff url(../img/pc/ico/icon_remove.png) no-repeat 0 center;
+    background-size: 19px;
+}
+
+.btn_save span {
+    background: url('../img/pc/ico/ico_btn_save.png') no-repeat;
+    background-size: 20px;
+}
