@@ -1,5 +1,14 @@
 @charset "utf-8";
-
+.ir-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 /* 라디오박스 */
 .radio-box {
     display: flex;
@@ -632,14 +641,23 @@
 }
 .tree-menu-wrap .tree-menu {
     padding: 16px;
+    transition: all 0.3s;
     display: none;
 }
 .tree-menu-wrap .tree-menu.is-active {
+    transition: all 0.3s;
     display: block;
 }
 .two-depth-list {
     margin-top: 18px;
     padding-left: 28px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.two-depth-list.is-active {
+    height: auto;
+    transition: all 0.3s;
 }
 .tree-depth-list {
     margin-left: 30px;
@@ -650,6 +668,7 @@
 .tree-depth-list.is-active {
     height: auto;
     padding: 8px 0;
+    transition: all 0.3s;
 }
 .two-depth-button {
     font-size: 15px;
@@ -657,6 +676,10 @@
 .two-depth-list li+li {
     margin-top: 8px;
 }
+.tree-depth-list li .haschildren {
+    position: relative;
+}
+.tree-depth-list li .haschildren a,
 .tree-depth-list li a {
     font-family: 'Pretendard';
     font-size: 15px;
@@ -671,6 +694,25 @@
 .tree-depth-list li+li {
     margin-top: 8px;
 }
+.depthmenu03  {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.depthmenu03.is-active {
+    height: auto;
+}
+.depthmenu03 li a {
+    font-family: 'Pretendard';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;    
+    color:#717B8A;
+}
+.depthmenu03 li+li {
+    margin-top: 8px;
+}
 .tree-menu-wrap .tree-list .haschildren {
     color:#222;
     font-family: 'Pretendard';
@@ -683,16 +725,19 @@
     display: flex;
     align-items: center;
     gap: 5px;
+
 }
-.tree-menu-wrap .tree-list .haschildren i {
+.tree-menu-wrap .tree-list .haschildren button {
     border: 1px solid #E1E3E9;
     width: 20px;
     height: 20px;
     position: relative;
     border-radius: 3px;
     display: inline-block;
+    background: #fff;
+    padding: 0;
 }
-.tree-menu-wrap .tree-list .haschildren i::before {
+.tree-menu-wrap .tree-list .haschildren button::before {
     content: '';
     width:10px;
     height: 1px;
@@ -703,7 +748,7 @@
     background-color: #AEB7C6;
     transform: translate(-50%, -50%);
 } 
-.tree-menu-wrap .tree-list .haschildren i::after {
+.tree-menu-wrap .tree-list .haschildren button::after {
     content: '';
     width:1px;
     height: 10px;
@@ -714,7 +759,7 @@
     background-color: #AEB7C6;
     transform: translate(-50%, -50%);
 }
-.tree-menu-wrap .tree-list .haschildren i i::after {
+.tree-menu-wrap .tree-list .haschildren button::after {
     content: '';
     width:1px;
     height: 10px;
@@ -725,7 +770,7 @@
     background-color: #AEB7C6;
     transform: translate(-50%, -50%);
 }
-.tree-menu-wrap .tree-list .haschildren i.is-active::after {
+.tree-menu-wrap .tree-list .haschildren button.is-active::after {
     display: none;
 }
 .tree-tab-head {

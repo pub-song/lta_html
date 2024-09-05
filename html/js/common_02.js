@@ -10,20 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
     
-        const menuAll = container.querySelector('.one-depth.all i');
-        const twoDepthMenuButtons = container.querySelectorAll('.two-depth-button i');
+        const menuAll = container.querySelector('.all-tree');
+        const oneDepth = container.querySelector('.two-depth-list')
+        const twoDepthMenuButtons = container.querySelectorAll('.two-depth-button');
         const treeDepthMenuList = container.querySelectorAll('.tree-depth-list');
         const treeDepthMenus = container.querySelectorAll('.tree-depth-list li a');
-    
+        const depthTreeMenus = container.querySelectorAll('.depthmenu03 li a');
+        console.log(menuAll, oneDepth)
         if (menuAll) {
             menuAll.addEventListener('click', () => {
                 menuAll.classList.toggle('is-active');
-                twoDepthMenuButtons.forEach(button => {
-                    button.classList.toggle('is-active');
-                });
-                treeDepthMenuList.forEach(list => {
-                    list.classList.toggle('is-active');
-                });
+                // twoDepthMenuButtons.forEach(button => {
+                //     button.classList.toggle('is-active');
+                // });
+                oneDepth.classList.toggle('is-active');
+                // treeDepthMenuList.forEach(list => {      
+                //     list.classList.toggle('is-active');
+                // });
             });
         }
     
@@ -50,6 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        depthTreeMenus.forEach(menu => {
+            menu.addEventListener('click', () => {
+                menu.classList.toggle('is-active');
+                if (menu.parentElement.nextElementSibling) {
+                    menu.parentElement.nextElementSibling.classList.toggle('is-active');
+                }
+            });
+        });        
     };
     
     treeMenu('#coverment');
