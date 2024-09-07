@@ -20,68 +20,6 @@
   <script src="js/common.js"></script>
   <script src="js/common_02.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <script>
-    $(function () {
-      fn_default_datepicker();
-    });
-
-    function fn_default_datepicker() {
-      var start = $("#datepicker_start").datepicker({
-        dateFormat: 'yy-mm-dd' //Input Display Format 변경
-        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-        , showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
-        , changeYear: true //콤보박스에서 년 선택 가능
-        , changeMonth: true //콤보박스에서 월 선택 가능                
-        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
-        , buttonImage: "./img/pc/ico/icon_calendar.png" //버튼 이미지 경로
-        , buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-        , buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
-        , yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-        , monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
-        , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
-        , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
-        , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
-        , minDate: "-6M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        , maxDate: "0M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                
-      });
-
-      var end = $("#datepicker_end").datepicker({
-        dateFormat: 'yy-mm-dd' //Input Display Format 변경
-        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-        , showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
-        , changeYear: true //콤보박스에서 년 선택 가능
-        , changeMonth: true //콤보박스에서 월 선택 가능                
-        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-        , buttonImage: "./img/pc/ico/icon_calendar.png" //버튼 이미지 경로
-        , buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-        , buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
-        , yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-        , monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
-        , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
-        , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
-        , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
-        , minDate: "-6M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        , maxDate: "0M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
-        , defaultDate: "+1w"
-      });
-
-      //초기값을 오늘 날짜로 설정
-      $('#datepicker_start').datepicker('setDate', '-7D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-      $('#datepicker_end').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-    }
-
-    function getDate(element) {
-      var date;
-      var dateFormat = "yy-mm-dd";
-      try {
-        date = $.datepicker.parseDate(dateFormat, element.value);
-      } catch (error) {
-        date = null;
-      }
-      return date;
-    }
-
-  </script>
 </head>
 
 <body>
@@ -193,7 +131,7 @@
             <ul>
               <li><a href="#none">홈</a></li>
               <li><a href="#none">시스템관리</a></li>
-              <li><a href="#none">문의 관리</a></li>
+              <li><a href="#none">문의/건의 관리</a></li>
             </ul>
           </div>
           <div class="pc">
@@ -205,6 +143,7 @@
 
       <div class="content_wrap">
         <div class="inner">
+          <!-- PC -->
           <div class="table_cont form-table pc">
             <table class="table-body-only table-fixed">
               <colgroup>
@@ -216,13 +155,19 @@
               <tbody>
                 <tr>
                   <th scope="row">등록일</th>
-                  <td colspan="3">2024.10.10 10:10</td>
+                  <td>2024.10.10 10:10</td>
+                  <th scope="row">분류</th>
+                  <td>문의</td>
                 </tr>
                 <tr>
                   <th scope="row">대상</th>
                   <td>이양사무</td>
+                  <th scope="row">공개여부</th>
+                  <td>비공개</td>
+                </tr>
+                <tr>
                   <th scope="row">등록자</th>
-                  <td>홍길동 (ID출력)</td>
+                  <td colspan="3">홍길동</td>
                 </tr>
                 <tr>
                   <th scope="row">제목</th>
@@ -263,6 +208,8 @@
               </tbody>
             </table>
           </div>
+
+          <!-- MOBILE -->
           <div class="table_cont mo">
             <table class="table-body-only no-line-type">
               <colgroup>
@@ -270,6 +217,10 @@
                 <col width="" />
               </colgroup>
               <tbody>
+                <tr></tr>
+                  <th scope="row">분류</th>
+                  <td>문의</td>                
+                </tr>
                 <tr>
                   <th scope="row">등록일</th>
                   <td>2024.10.10 10:10</td>                
@@ -293,7 +244,7 @@
                   </td>    
                 </tr>
                 <tr> 
-                  <td scope="row" colspan="2">
+                  <td scope="row" colspan="2" class="full-width">
                     상세내용
                     <div class="form-element__wrap mt-16">                                
                       <span class="form-element__inner text-area">
@@ -303,7 +254,7 @@
                   </td>
                 </tr>
                 <tr> 
-                  <td scope="row" colspan="2">
+                  <td scope="row" colspan="2" class="full-width">
                     답변내용
                     <div class="form-element__wrap mt-16">                                
                       <span class="form-element__inner text-area">
@@ -335,6 +286,7 @@
               <i class="ico-list"></i> 목록
             </a>
           </div>
+          
         </div>
       </div>
     </div>
@@ -463,7 +415,7 @@
     <div class="footer mo foot_btn_wrap">
       <div class="foot_btn_area">
         <a href="#none" class="btn btn_delete"><span>삭제</span></a>
-        <a href="#none" class="btn btn btn_save"><span>저장</span></a>
+        <a href="#none" class="btn btn_save"><span>저장</span></a>
         <a href="#none" class="btn btn_list"><span>목록</span></a>
       </div>
     </div>

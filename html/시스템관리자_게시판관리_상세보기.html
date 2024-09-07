@@ -20,68 +20,6 @@
   <script src="js/common.js"></script>
   <script src="js/common_02.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <script>
-    $(function () {
-      fn_default_datepicker();
-    });
-
-    function fn_default_datepicker() {
-      var start = $("#datepicker_start").datepicker({
-        dateFormat: 'yy-mm-dd' //Input Display Format 변경
-        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-        , showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
-        , changeYear: true //콤보박스에서 년 선택 가능
-        , changeMonth: true //콤보박스에서 월 선택 가능                
-        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
-        , buttonImage: "./img/pc/ico/icon_calendar.png" //버튼 이미지 경로
-        , buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-        , buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
-        , yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-        , monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
-        , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
-        , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
-        , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
-        , minDate: "-6M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        , maxDate: "0M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                
-      });
-
-      var end = $("#datepicker_end").datepicker({
-        dateFormat: 'yy-mm-dd' //Input Display Format 변경
-        , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-        , showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
-        , changeYear: true //콤보박스에서 년 선택 가능
-        , changeMonth: true //콤보박스에서 월 선택 가능                
-        , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-        , buttonImage: "./img/pc/ico/icon_calendar.png" //버튼 이미지 경로
-        , buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-        , buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
-        , yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-        , monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
-        , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
-        , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
-        , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
-        , minDate: "-6M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        , maxDate: "0M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
-        , defaultDate: "+1w"
-      });
-
-      //초기값을 오늘 날짜로 설정
-      $('#datepicker_start').datepicker('setDate', '-7D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-      $('#datepicker_end').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-    }
-
-    function getDate(element) {
-      var date;
-      var dateFormat = "yy-mm-dd";
-      try {
-        date = $.datepicker.parseDate(dateFormat, element.value);
-      } catch (error) {
-        date = null;
-      }
-      return date;
-    }
-
-  </script>
 </head>
 
 <body>
@@ -205,6 +143,7 @@
 
       <div class="content_wrap">
         <div class="inner">
+          <!-- PC -->
           <div class="table_cont form-table pc">
             <table class="table-body-only table-fixed">
               <colgroup>
@@ -216,7 +155,7 @@
               <tbody>
                 <tr>
                   <th scope="row">등록자</th>
-                  <td colspan="3">메인</td>
+                  <td colspan="3">관리자</td>
                 </tr>
                 <tr>
                   <th scope="row">등록일</th>
@@ -286,11 +225,11 @@
                   <td colspan="3">
                     <div class="radio-box">
                       <label id="r01">
-                        <input type="radio" name="type1" value="type010" id="r01" disabled>
+                        <input type="radio" name="type1" value="type1" id="r01" checked>
                         <span>사용</span>
                       </label>
                       <label id="r02">
-                        <input type="radio" name="type1" value="type011" id="r02" checked="" disabled>
+                        <input type="radio" name="type1" value="type2" id="r02">
                         <span>미사용</span>
                       </label>
                     </div>  
@@ -301,33 +240,59 @@
                   <td colspan="3">
                     <div>
                       <div class="radio-box">
-                        <label id="r01">
-                          <input type="radio" name="type1" value="type010" id="r01" disabled>
+                        <label id="r03">
+                          <input type="radio" name="type2" value="type010" id="r03">
                           <span>사용</span>
                         </label>
-                        <label id="r02">
-                          <input type="radio" name="type1" value="type011" id="r02" checked="" disabled>
+                        <label id="r04">
+                          <input type="radio" name="type2" value="type011" id="r04" checked>
                           <span>미사용</span>
                         </label>
-                      </div>  
-                      <ul class="file-list">
+                      </div>
+                      <div class="divide-line"></div> <!-- 구분선 -->
+                      <ul class="form-select-list">
                         <li>
-                          <input type="file" name="" class="file" style="width: 600px;" />
-                          <div class="form-element__wrap">
-                            <div class="input-multi file-up">
-                              <span class="form-element__inner input-type">
-                                <input type="text" placeholder="" title="파일첨부">
-                              </span>
-                              <button type="button" class="btn-border-gray">
-                                <i class="icon-file"></i>
-                                파일찾기
-                              </button>
-                              <button type="button" class="btn-dark-light btn-add">
-                                <i class="ico-plus"></i>
-                                추가
-                              </button>
-                            </div>
+                          첨부파일 수
+                          <!-- 콤보박스 -->
+                          <div class="select_box" style="width: 120px">
+                            <span class="select">1</span>
+                            <div class="option" style="display: none;">
+                              <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                                <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                  <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                    <ul>
+                                      <li>1</li>
+                                      <li>1</li>
+                                      <li>1</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>  
                           </div>
+                          <!-- //콤보박스 -->    
+                        </li>
+                        <li>
+                          파일용량(1개)
+                          <!-- 콤보박스 -->
+                          <div class="select_box" style="width: 120px">
+                            <span class="select">5</span>
+                            <div class="option" style="display: none;">
+                              <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                                <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                  <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                    <ul>
+                                      <li>5</li>
+                                      <li>10</li>
+                                      <li>1</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>  
+                          </div>
+                          <!-- //콤보박스 -->
+                           M byte    
                         </li>
                       </ul>
                     </div>
@@ -337,12 +302,12 @@
                   <th scope="row">댓글여부</th>
                   <td colspan="3">
                     <div class="radio-box">
-                      <label id="r01">
-                        <input type="radio" name="type1" value="type010" id="r01" disabled>
+                      <label id="r05">
+                        <input type="radio" name="type3" value="type010" id="r05" disabled>
                         <span>사용</span>
                       </label>
-                      <label id="r02">
-                        <input type="radio" name="type1" value="type011" id="r02" checked="" disabled>
+                      <label id="r06">
+                        <input type="radio" name="type3" value="type011" id="r06" checked disabled>
                         <span>미사용</span>
                       </label>
                     </div>  
@@ -352,12 +317,12 @@
                   <th scope="row">만족도</th>
                   <td colspan="3">
                     <div class="radio-box">
-                      <label id="r01">
-                        <input type="radio" name="type1" value="type010" id="r01" disabled>
+                      <label id="r07">
+                        <input type="radio" name="type4" value="type010" id="r07" disabled>
                         <span>사용</span>
                       </label>
-                      <label id="r02">
-                        <input type="radio" name="type2" value="type011" id="r02" checked="true" disabled>
+                      <label id="r08">
+                        <input type="radio" name="type4" value="type011" id="r08" checked disabled>
                         <span>미사용</span>
                       </label>
                     </div>  
@@ -366,9 +331,9 @@
                 <tr>
                   <th>게시판주소</th>
                   <td colspan="3">
-                    <div class="form-element__wrap">                                
+                    <div class="form-element__wrap disabled-element-wrap">
                       <span class="form-element__inner input-type">
-                          <input type="text" value="/cop/bbs/selectArticleList.do?bbsId=BBSMSTR_000000000001BXzsDTybSI" class="input-type1-font14" placeholder="게시판 주소" title="게시판 주소" disabled>
+                        <input type="text" value="/cop/bbs/selectArticleList.do?bbsId=BBSMSTR_000000000001BXzsDTybSI" class="input-type1-font14" placeholder="게시판주소" title="게시판주소" disabled>
                       </span>
                     </div>  
                   </td>
@@ -378,7 +343,7 @@
                   <td colspan="3">
                     <div class="form-element__wrap">                                
                       <span class="form-element__inner text-area">
-                        <textarea value="게시판 소개 내용 노출" placeholder="게시판 소개" title="게시판 소개"></textarea>
+                        <textarea placeholder="게시판 소개" title="게시판 소개">게시판 소개</textarea>
                       </span>
                     </div>
                   </td>
@@ -386,7 +351,213 @@
               </tbody>
             </table>
           </div>
-          <div class="button__wrap flex-end mt-64">
+
+          <div class="table_cont mo">
+            <table class="table-body-only no-line-type table-fixed">
+              <colgroup>
+                <col width="30%" />
+                <col width="" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">노출위치</th>
+                  <td>관리자</td>                
+                </tr>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <td>2024.10.10</td>                 
+                </tr>
+                <tr>
+                  <th scope="row">게시판명</th>
+                  <td>
+                    <div class="form-element__wrap">                                
+                      <span class="form-element__inner input-type">
+                        <input type="text" value="게시판명 노출" class="input-type1-font14" placeholder="제목" title="제목">
+                      </span>
+                      <span class="input-text-count">
+                        <span class="current">0</span> / <span>50자</span>
+                      </span>
+                    </div>                          
+                  </td>    
+                </tr>
+                <tr>
+                  <th scope="row">대상</th>
+                  <td>
+                    <!-- 콤보박스 -->
+                    <div class="select_box full">
+                      <span class="select">전체</span>
+                      <div class="option">
+                        <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                          <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                            <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                              <ul>
+                                <li>전체</li>
+                                <li>선택함2</li>
+                                <li>선택함3</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                    <!-- //콤보박스 -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">유형</th>
+                  <td>
+                    <!-- 콤보박스 -->
+                    <div class="select_box full">
+                      <span class="select">공지</span>
+                      <div class="option">
+                        <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                          <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                            <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                              <ul>
+                                <li>전체</li>
+                                <li>선택함2</li>
+                                <li>선택함3</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                    <!-- //콤보박스 -->
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">사용여부</th>
+                  <td>
+                    <div class="radio-box">
+                      <label id="r01">
+                        <input type="radio" name="type1" value="type020" id="r01" checked>
+                        <span>사용</span>
+                      </label>
+                      <label id="r02">
+                        <input type="radio" name="type1" value="type021" id="r02">
+                        <span>미사용</span>
+                      </label>
+                    </div>                               
+                  </td>   
+                </tr>
+                <tr>
+                  <th scope="row">파일첨부<br/>여부</th>
+                  <td>
+                    <div class="radio-box">
+                      <label id="r03">
+                        <input type="radio" name="type2" value="type020" id="r03" checked>
+                        <span>사용</span>
+                      </label>
+                      <label id="r04">
+                        <input type="radio" name="type2" value="type021" id="r04">
+                        <span>미사용</span>
+                      </label>
+                    </div>                         
+                  </td>   
+                </tr>
+                <tr class="table-sub-contents">
+                  <td colspan="2">
+                    <ul class="form-select-list">
+                      <li>
+                        <div>첨부파일 수</div>
+                        <!-- 콤보박스 -->
+                        <div class="select_box" style="width: 120px">
+                          <span class="select">1</span>
+                          <div class="option" style="display: none;">
+                            <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                              <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                  <ul>
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                        </div>
+                        <!-- //콤보박스 -->    
+                      </li>
+                      <li class="mt-16">
+                        <div>파일용량(1개)</div>
+                        <!-- 콤보박스 -->
+                        <div class="select_box" style="width: 120px">
+                          <span class="select">5</span>
+                          <div class="option" style="display: none;">
+                            <div class="mCustomScrollbar _mCS_5 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="overflow: visible; height: 100px; position: relative;">
+                              <div id="mCSB_5" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                <div class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                  <ul>
+                                    <li>5</li>
+                                    <li>10</li>
+                                    <li>1</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                        </div>
+                        <!-- //콤보박스 -->
+                        M byte    
+                      </li>
+                    </ul>      
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">댓글여부</th>
+                  <td>
+                    <div class="radio-box">
+                      <label id="r05">
+                        <input type="radio" name="type3" value="type020" id="r05" disabled checked>
+                        <span>사용</span>
+                      </label>
+                      <label id="r06">
+                        <input type="radio" name="type3" value="type021" id="r06" disabled>
+                        <span>미사용</span>
+                      </label>
+                    </div>                               
+                  </td>   
+                </tr>
+                <tr>
+                  <th scope="row">만족도</th>
+                  <td>
+                    <div class="radio-box">
+                      <label id="r07">
+                        <input type="radio" name="type2" value="type020" id="r07" disabled checked>
+                        <span>사용</span>
+                      </label>
+                      <label id="r08">
+                        <input type="radio" name="type2" value="type021" id="r08" disabled>
+                        <span>미사용</span>
+                      </label>
+                    </div>                               
+                  </td>   
+                </tr>
+                <tr>
+                  <th scope="row">게시판 주소</th>
+                  <td>
+                    <div class="disabled-text">
+                      /cop/bbs/selectArticleList.do?bbsId=BBSMSTR_000000000001BXzsDTybSI
+                    </div>                          
+                  </td>   
+                </tr>
+                <tr> 
+                  <td scope="row" colspan="2" class="full-width">
+                    게시판 소개
+                    <div class="form-element__wrap mt-16">                                
+                      <span class="form-element__inner text-area">
+                        <textarea class="input-type1-font14" placeholder="게시판 내용 노출" title="게시판 소개">게시판 내용 노출</textarea>
+                      </span>
+                    </div> 
+                  </td> 
+                </tr>                                                                                                                                                        
+              </tbody>
+            </table>
+          </div>
+
+          <div class="button__wrap flex-end mt-64 pc">
             <a href="#" class="btn-gray-default">
               <i class="ico-delete"></i> 삭제
             </a>
@@ -519,6 +690,14 @@
           </div>
           <p class="copy">ⓒ Ministry of the Interior and Safety. All rights reserved.</p>
         </div>
+      </div>
+    </div>
+
+    <div class="footer mo foot_btn_wrap">
+      <div class="foot_btn_area">
+        <a href="#none" class="btn btn_delete"><span>삭제</span></a>
+        <a href="#none" class="btn btn btn_save"><span>저장</span></a>
+        <a href="#none" class="btn btn_list"><span>목록</span></a>
       </div>
     </div>
   </div>
